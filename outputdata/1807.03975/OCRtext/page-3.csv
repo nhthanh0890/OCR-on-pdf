@@ -1,0 +1,60 @@
+Testing and debugging ﬁltering of global constraints
+
+"cp . post(constraint)
+} catch {
+
+case _: Inconsistency => throw new NoSolutionException
+}
+
+vr.m x: x.t Arr .t t"
+
+11
+
+
+14
+"}
+}
+17 check(trustedACA11Diff, oscarACAllDiff)
+
+18"
+
+16
+"The trusted ﬁltering algorithm is created thanks to the ArcFiltering class at
+line 3. The checker for AllDifferent simply veriﬁes that the union of the values
+in the array has a cardinality equal to the size of the array, as deﬁned at line
+2. The tested ﬁltering implements the filter function using OscaR’s ﬁltering.
+It ﬁrst transforms the variables into OscaR’s variables (line 7) then creates the
+constraint over them (line 8). It is then posted to the solver which ﬁlters the
+domains until ﬁx—point before returning them."
+Testing stateful constraints
+
+"Incremental Filtering Algorithms usually maintain some form of state in the
+constraints. It can for instance be reversible data-structures for trailed-based
+solvers. CPChecker allows to test a stateful ﬁltering algorithm by testing it dur-
+ing a search while checking the state restoration. In terms of implementation, the
+incremental check and stronger functions compare FilterWithState objects
+that must implement two functions. The setup function reaches the ﬁX-point
+while setting up the solver used for the search. The bmnchAndFilter function
+applies a branching operation on the current state of the solver and reaches a
+new ﬁx—point for the constraint. The branching operations represent standard
+branching constraints such as =,#, <, > and the push/pop operations on the
+trail allowing to implement the backtracking mechanism (see [10] for further
+details on this mechanism)."
+"1 abstract Class FilterWithState {
+a def setup(variables: Array[Set[Int]]): Array[Set[Int]]"
+
+
+Idef branchAndFilter (branching: BranchOp): Array [ Set [Int ]]
+
+"The process of testing an incremental/stateful ﬁltering algorithm is divided
+into four consecutive steps :
+
+1. Domains generation
+
+2. Application of the setup function of the tested and trusted ﬁltering algo-
+rithms.
+
+3. Comparing the ﬁltered domains returned at step 2.
+
+4. Execution of a number of ﬁxed number dives as explained next based on the
+application of bmnchAndFilter function."

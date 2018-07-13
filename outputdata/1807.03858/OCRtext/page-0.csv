@@ -1,0 +1,52 @@
+
+Algorithmic Framework for Model-based
+Reinforcement Learning with Theoretical Guarantees
+
+Yuanzhi Li T
+Yuandong Tian 1
+Trevor Darrell §
+Tengyu Ma 11
+Huazhe Xu*
+Abstract
+"While model-based reinforcement learning has empirically been shown to signiﬁ-
+cantly reduce the sample complexity that hinders model-free RL, the theoretical
+understanding of such methods has been rather limited. In this paper, we introduce
+a novel algorithmic framework for designing and analyzing model-based RL al-
+gorithms with theoretical guarantees, and a practical algorithm Optimistic Lower
+Bounds Optimization (OLBO). In particular, we derive a theoretical guarantee of
+monotone improvement for model-based RL with our framework. We iteratively
+build a lower bound of the expected reward based on the estimated dynamical
+model and sample trajectories, and maximize it jointly over the policy and the
+model. Assuming the optimization in each iteration succeeds, the expected reward
+is guaranteed to improve. The framework also incorporates an optimism-driven
+perspective, and reveals the intrinsic measure for the model prediction error. Prelim-
+inary simulations demonstrate that our approach outperforms the standard baselines
+on continuous control benchmark tasks."
+
+Introduction
+"In recent years reinforcement learning has achieved strong empirical success, including super-human
+performances on Atari games and Go [26, 35] and learning locomotion and manipulation skills
+in robotics [22, 33, 24]. Many of these results are achieved by model-free reinforcement learning
+algorithms that often require a massive number of samples, and therefore their applications are
+mostly limited to simulated environments. Model-based reinforcement learning, in contrast, exploits
+the information from state observations explicitly — by planning with a learned dynamical model
+— and is considered a promising approach to reduce the sample complexity. Indeed, empirical
+results [8, 9, 22, 28, 20, 30] have shown strong improvements in terms of sample efﬁciency."
+"Despite promising empirical ﬁndings, many of theoretical properties of model-based reinforcement
+are not well-understood. For example, how does the error of the estimated model affect the estimation
+of the value function and the planning? Can model-based RL algorithms be guaranteed to improve the
+policy monotonically and converge to a local maximum of the value function? How do we quantify
+the uncertainty in the dynamical models? Previous theoretical results [1, 36, 6, 39, 40] mostly focus
+on linear parametrizations of the value function, policy or dynamics, and thus may not be applicable
+to complex situations in deep reinforcement learning."
+"In this paper, we propose a novel algorithmic framework for model-based reinforcement learning
+with theoretical guarantees. We provide upper bound on how much the error can compound and divert
+the value of imaginary rollouts from their real value. With this, our algorithm builds a lower bound of
+
+*UC Berkeley. huazhe_xu@eecs . berkeley . edu
+lPrinceton University. yuanzhichs . princet on . edu
+i‘Facebook AI Research. yuandonngb . com
+
+§UC Berkeley. trevorGeecs .berkeley . edu
+11Facebook AI Research. tengyumaGstanford. edu"
+Preprint. Work in progress.

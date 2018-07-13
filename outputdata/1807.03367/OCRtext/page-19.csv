@@ -1,0 +1,129 @@
+"ACTIONzTURNLEFT ACTIONzFORWARD ACTIONzTURNLEFT ACTIONzTURNRIGHT ACTIONzTURNRIGHT
+I can’t go straight any further.
+
+ok. turn so that the theater is on your right.
+
+then go straight
+
+That would be going back the way I came
+
+yeah. I was looking at the wrong bank
+
+I’ll notify when I am back at the brooks brothers, and the bank.
+ACTIONzTURNRIGHT
+
+make a right when the bank is on your left
+
+ACTIONzFORWARD ACTIONzFORWARD ACTIONzTURNRIGHT
+
+Making the right at the bank.
+
+ACTIONzFORWARD ACTIONzFORWARD
+
+I can’t go that way.
+
+ACTIONzTURNLEFT
+
+Bank is ahead of me on the right
+
+ACTIONzFORWARD ACTIONzFORWARD ACTIONzTURNLEFT
+
+turn around on that intersection
+
+I can only go to the left or back the way I just came.
+ACTIONzTURNLEFT
+
+you’re in the right place. do you see shops on the corners?
+
+If you’re on the corner with the bank, cross the street
+
+I’m back where I started by the shop and the bank.
+ACTIONzTURNRIGHT
+
+on the same side of the street?
+
+crossing the street now
+
+ACTIONzFORWARD ACTIONzFORWARD ACTIONzTURNLEFT
+
+there is an I love new york shop across the street on the left from me now
+ACTIONzTURNRIGHT ACTIONzFORWARD
+
+ok. I’ll see if it’s right.
+
+EVALUATE_LOCATION
+
+It’s not right.
+
+What should I be on the look for?
+
+ACTIONzTURNRIGHT ACTIONzTURNRIGHT ACTIONzTURNRIGHT
+
+There should be shops on two corners but you need to be on one of the corners
+without the shop.
+
+Try the other corner.
+
+this intersection has 2 shop corners and a bank corner
+
+yes. that’s what I see on the map.
+
+should I go to the bank corner? or one of the shop corners?
+
+or the blank corner (perhaps a hotel)
+
+ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzTURNRIGHT ACTIONzTURNRIGHT
+Go to the one near the hotel. The map says the hotel is a little
+further down but it might be a little off.
+
+It’s a big hotel it’s possible.
+
+ACTIONzFORWARD ACTIONzTURNLEFT ACTIONzFORWARD ACTIONzTURNRIGHT
+I’m on the hotel corner
+
+EVALUATE_LOCATION"
+"Tourist:
+Tourist:
+Guide:
+Guide:
+Tourist:
+Guide:
+Tourist:
+Tourist:
+Guide:
+Tourist:
+Tourist:
+Tourist:
+Tourist:
+Tourist:
+Tourist:
+Tourist:
+Guide:
+Tourist:
+Tourist:
+Guide:
+Guide:
+Tourist:
+Tourist:
+Guide:
+Tourist:
+Tourist:
+Tourist:
+Tourist:
+Guide:
+Guide:
+Guide:
+Tourist:
+Tourist:
+Guide:"
+"Guide:
+Tourist:
+Guide:
+Tourist:"
+"Tourist:
+Guide:"
+"Tourist:
+Tourist:
+Tourist:
+Guide:"
+20

@@ -1,0 +1,39 @@
+Learning Neural Models for End-to-End
+Clustering
+"Benjamin Bruno Meier1’2, Ismail Elezi1’3, Mohammadreza Amirian1’4,
+
+Oliver Dﬁrr1’5, and Thilo Stadelmann1"
+"1 ZHAW Datalab & School of Engineering, Winterthur, Switzerland
+2 ARGUS DATA INSIGHTS Schweiz AG, Zurich, Switzerland
+3 Ca’ Foscari University of Venice, Venice, Italy
+4 Institute of Neural Information Processing, Ulm University, Germany
+5 Institute for Optical Systems, HTWG Konstanz, Germany"
+"Abstract. We propose a novel end-to—end neural network architecture
+that, once trained, directly outputs a probabilistic clustering of a batch of
+input examples in one pass. It estimates a distribution over the number of
+clusters k, and for each 1 S k S kmax, a distribution over the individual
+cluster assignment for each data point. The network is trained in advance
+in a supervised fashion on separate data to learn grouping by any percep-
+tual similarity criterion based on pairwise labels (same / different group).
+It can then be applied to different data containing different groups. We
+demonstrate promising performance on high-dimensional data like images
+(COIL-100) and speech (TIMIT). We call this “learning to cluster” and
+show its conceptual difference to deep metric learning, semi-supervise
+clustering and other related approaches while having the advantage of
+performing learnable clustering fully end-to—end."
+Keywords: perceptual grouping - learning to cluster - speech & image clustering
+Introduction
+
+"Consider the illustrative task of grouping images of cats and dogs by perceived
+similarity: depending on the intention of the user behind the task, the similarity
+could be deﬁned by animal type (foreground object), environmental nativeness
+(background landscape, cp. Fig. 1) etc. This is characteristic of clustering percep-
+tual, high-dimensional data like images [15] or sound [24]: a user typically has
+some similarity criterion in mind when thinking about naturally arising groups
+(e.g., pictures by holiday destination, or persons appearing; songs by mood, or
+use of solo instrument). As deﬁning such a similarity for every case is difﬁcult, it
+is desirable to learn it. At the same time, the learned model will in many cases
+not be a classiﬁer—the task will not be solved by classiﬁcation—since the number
+and speciﬁc type of groups present at application time are not known in advance
+(e.g., speakers in TV recordings; persons in front of a surveillance camera; object
+types in the picture gallery of a large web shop)."

@@ -1,0 +1,53 @@
+"Table 1: Reward function deﬁnition in Swimmer and Half-cheetah environments
+
+ 
+
+Half-cheetah st‘ — 0.05||%||2"
+Implementation Details
+
+E.1
+Environment Specs
+"We adopt Half-Cheetah and Swimmer environments from Muj oco simulator as our testing environ-
+ment. The observation space is slightly modiﬁed by removing redundant dimensions. The action
+space is normalized to the space from -1 to 1. We use the standard reward as in rllab [l 1]. We set 200
+as the maximum step number in each rollout. For the noisy-cheetah environment, we concatenate 10
+
+more entries of unit Gaussian variable to the original states. This will make the environment harder
+to learn in practice."
+E.2
+Architecture
+"For all the experiments, we use a two layer fully connected network with 500 hidden units each
+layer to ﬁt the dynamics of environments. We use another fully connected two-layer network with
+32 hidden units per layer as policy network. To approximate the critic function, we use a two-layer
+network with 100 hidden units per layer. All the activation layers for model learning are using ReLU
+and for policy network tanh."
+E.3
+Data Preprocessing and Hyper-parameter Selection
+E.3.1
+Data Collection
+"We ﬁrst deﬁne each stage means a full pipeline of data collection, model training and policy optimiza-
+tion. We populate the dataset with 60 rollouts in Swimmer and 150 rollouts in cheetah each stage
+that resulted from the execution of parameterized actions at from a randomly initialized exploratory
+policy network. Each rollout started from a selected starting state so with small gaussian noise
+~ N(0, 0.001). During data collection, we use the Ornstein—Uhlenbeck noise with a = 0.3 and
+0 = 0.15 to get an exploratory policy for more diverse trajectories. We set the upper bound scale for
+
+the dataset 5 times the amount collected in each stage and will drop the oldest ones when the dataset
+is full."
+E.3.2
+Imaginary Model Learning
+"We use Adam optimizer with 1e—3 as learning rate to learn the model. We normalize the input data for
+model learning with empirical mean and variance computed in the initial stage. The model outputs a
+normalized difference between previous input state and the next state. The batchsize is 512 state and
+action pairs every step. We train this network 40/Inin(n,5) epochs where n is the number of stage we
+are at. In each epoch, the network goes over the whole dataset once."
+E.3.3
+TRPO Hyperparameters
+"For TRPO we use the version provided by rllab [l l] and use a batch size of 4000 every iteration and
+step size 0.01 for conjugate gradient optimization. Other hyperparameters stay the same as the online
+version. In each stage we train it for 100 steps. Note that more training steps will make trpo overﬁt
+the imaginary model heavily for baselines."
+E.3.4
+OLBO hyperparameters
+We set K = 80, k = 40 and m = 10 in Algorithm 3.
+19

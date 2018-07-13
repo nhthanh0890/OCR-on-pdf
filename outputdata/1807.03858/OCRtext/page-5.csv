@@ -1,0 +1,73 @@
+"Proposition 4.2. In the same setting of Proposition 4.1, assume in addition that 7r is close to a
+reference policy mef in the sense that dKL(7r, 7nd) 3 6, and the states in S are uniformly bounded in
+the sense that S B, Vs E S. Then,"
+"|V7|',1TJ\ _ V7r,M*
+
+ 
+
+2
+2m 53
+[HMS A) — M*(S, A)||] +
+E ,
+S KIL S~p7rlef
+A~7r(-|S)"
+(4.4)
+"In a benign scenario, the second term in the RHS of equation (4.4) should be dominated by the ﬁrst
+term when the neighborhood size 6 is sufﬁciently small. Moreover, the term B can also be replaced
+
+by maxs,A (S, A) — M *(S’, A) The dependency on K may not be tight but we note that most of
+the analysis of similar nature loses additional n factor [32, 3]. Towards proving Propositions 4.2, we
+
+deﬁne the following quantity that captures the discrepancy between a dynamical model if and M *
+for a single state-action pair (3, a).
+
+A
+
+G”’M(s, a) = Vﬂ’ﬁﬂlﬂs, a» — V”’1‘7(M*(s,a)) (4.5)"
+(4.5)
+"We ﬁrst give a telescoping lemma that decompose the discrepancy between V7""M and VW’IW into
+the expected single-step discrepancy G.
+
+Lemma 4.3. [Telescoping Lemma] Recall that n := 7(1 — *y)_1. For any policy 7r and dynamical
+models M, M, we have that"
+"V“’M — V“’M = n ]E [GM7 (S, A)]
+
+M
+S~p""’
+ANWHS)"
+(4.6)
+"The proof is reminiscent of the telescoping expansion in [15] (c.f. [32]) for characterizing the value
+difference of two policies, but we apply it to deal with the discrepancy between models. The
+detail is deferred to Supp. Materials. With the telescoping Lemma 4.3, Proposition 4.1 follows
+
+straightforwardly from Lipschitzness of the imaginary reward function. Proposition 4.2 follows from
+that p7r and p7rref are close. We defer them to Supp. Materials."
+4.2
+Intrinsic error of the prediction
+"As alluded in the previous subsection, the prediction error based bounds doesn’t apply when the value
+functions are not Lipschitz. Moreover, there are two limitations:"
+"First, it’s not clear, a priori, what is the right norm  -  that we should pick to measure the difference
+
+between the prediction 1T? (5', A) and the true next state M *(S, A). The correct one should be
+problem-dependent but state-representation invariant. Consider a scenario where some coordinates of
+the states 5' is redundant fundamentally: suppose the state S is consist of two blocks [31, 5'2] where
+5'1 is the intrinsic representation in the sense that the reward only depends on the coordinates in 5'1
+and the next state 81 also only depends 5'1. In this case, a good dynamical model should only care
+about the prediction of 5'2. However, with the generic norm based loss, the learning algoritlnn may
+spend unnecessary efforts in predicting 5'2. Thus, the optimal should metric take into account the
+intrinsic geometry in the state space induced by the dynamics."
+"Second, the error metric for the prediction should also depend on the state itself instead of only on the
+difference M (S, A) — M *(S’, A). It’s very possible that when S is at a critical position (e.g., when a
+
+robot is about to fall), the prediction error needs to be highly accurate so that the model if can be
+useful for planning. On the other hand, at other states, the dynamical model is allowed make bigger
+mistakes because they are not essential for the reward and can be corrected in an open loop system."
+"We propose the following discrepancy bound towards addressing the limitation above. Recall the
+deﬁnition of GW’M(s,a) = VW’M(M(s, a)) — VW’M(M*(s,a)) which measures the difference
+between M (s, a)) and M * (s, a) according to their imaginary rewards. We construct a discrepancy
+
+bound using the absolute value of G. Let’s deﬁne 51 and emax as the average of |G”’M | and its
+maximum."
+
+(4.7)
+

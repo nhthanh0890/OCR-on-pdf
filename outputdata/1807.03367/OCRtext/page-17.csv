@@ -1,0 +1,72 @@
+"120
+
+100
+50 7
+4o 7
+
+‘ Sumsz
+
+‘ >m593m
+
+‘ noﬁ
+
+‘ ucmSBmmx
+
+‘ 9833.”.
+
+‘ _Bo:
+
+‘ 50% mmtuu
+
+. Em
+
+. v.53"
+120 -
+100 i
+"D D
+H 6
+
+ho 53:52
+
+407"
+Figure 4: Frequency of landmark classes
+"Features Train loss Valid Loss Train F1 Valid F1 Valid prec. Valid recall
+All positive - - - 0.39313 0.26128 1
+
+Random (0.5) - - - 0.32013 0.24132 0.25773
+Textrecog 0.01462 0.01837 0.31205 0.31684 0.2635 0.50515
+Fasttext 0.00992 0.00994 0.24019 0.31548 0.26133 0.47423
+Fasttext (100 dim) 0.00721 0.00863 0.32651 0.28672 0.24964 0.4433
+ResNet 0.00735 0.00751 0.17085 0.20159 0.13114 0.58763
+ResNet (256 dim) 0.0051 0.00748 0.60911 0.31953 0.27733 0.50515"
+Table 10: Results for landmark classiﬁcation.
+"the north and west direction. The orientation-speciﬁc Views are obtained by a planar projection
+of the full 360-image with a small ﬁeld of View (60 degrees) to limit distortions. To cover the
+full ﬁeld of View, we extract two images per orientation, with their horizontal focus point 30
+degrees apart. Hence, we obtain eight images per 360 image with corresponding orientation v 6
+{N1, N2, E1, E2, 81, S2, W1, W2}."
+We run the following pre-trained feature extractors over the extracted images:
+"ResNet We resize the extracted View to a 224x224 image and pass it through a ResNet—152 network
+[25] to obtain a 2048-dimensiona1 feature vector 89:25:)“ E R2048 from the penultimate
+layer."
+"Text Recognition We use a pre—trained text—recognition model [20] to extract a set of text messages
+ : {REM 53:0 from the images. Local businesses often advertise their wares through
+key phrases on their storefront, and understanding this text might be a good indicator of the
+type of landmark. In Figure 3, we show the results of running the text recognition module
+
+on a few extracted images."
+"For the text recognition model, we use a learned look-up table Eta“ to embed the extracted text
+features e5 : Eta“ (REM), and fuse all embeddings of four images through a bag of embeddings,
+
+$4411}
+i.e., efused : Everelevamviews :5 egg”). We use a linear layer followed by a sigmoid to predict
+
+the probability for each class, i.e. sigmoid(Wef“56d + b). We also experiment with replacing the
+look-up embeddings with pre-trained FastText embeddings [7]. For the ResNet model, we use a bag
+
+of embeddings over the four ResNet features, i.e. efusecl : Zvaelevamviews 85352,“, before we pass
+
+it through a linear layer to predict the class probabilities: sigmoid(Wef“56d + b). We also conduct
+experiments where we ﬁrst apply PCA to the extracted ResNet and FastText features before we feed
+them to the model."
+18

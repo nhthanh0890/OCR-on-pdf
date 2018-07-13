@@ -1,0 +1,82 @@
+
+Proof of Lemma 4.3
+"Proof of Lemma 4.3. Let Wj be the cumulative reward when we use dynamical model M for j steps
+and then M for the rest of the steps, that is,"
+"00
+
+:I ]E Z’th(St, At) | 30 = s
+VtZQAtNW('|St) 15:0
+Vj>tZOaSt+1 ~M('|St aAt)
+
+VthaSt+1~ﬁ('|StaAt)"
+
+(A.1)
+"By deﬁnition, we have that Wt>0 = V7""M (s) and W0 = V7“? Then, we decompose the target
+into a telescoping sum,"
+
+(A.2)
+"Now we re-write each of the summands Wj+1 — Wj. Comparing the trajectory dis-
+tribution in the deﬁnition of Wj+1 and Wj, we see that they only differ in the dy-
+namical model applied in j-th step. Concretely, Wj and Wj+1 can be rewritten
+
+E R + Esj,Aj~7r,M @nglest [71+1Vm1‘7(§j+1)]] and W]-+1 a
+
+Esj,Aj ~7r,M* [Esj+1~M(.lsj,Aj) [7j+1V”’ﬁ(Sj+1)]] where R denotes the reward from the ﬁrst j
+steps from policy 7r and model M *. Canceling the shared term in the two equations above, we get"
+as Wj
+
+
+
+
+(A.3)
+Combining the equation above with equation (A.2) concludes that
+"V7r,M
+_ V“? _ 7
+1 _
+7 s~ "" E
+p ,ANW VWJTZ
+(S) [ (M(S A
+,  _ V7r,1T/I\(M\
+(3 A)
+, )]"
+(A.4)
+
+Missing Proofs in Section 4
+
+Proof of Proposition 4.4. By Lemma 4.3 and triangle inequality, we have that
+"1 _ 7 V7r,M _ V7r,1T/I\
+
+ 
+
+S E""[
+S~p
+
+ 
+
+mm]"
+(triangle inequality)
+"A
+
+GmM
+(S)\] + lp” — WI
+1-max
+S
+
+ 
+
+Gm I’VI‘
+(H (S)\
+older inequality
+)"
+"By Corollary D.7 we have that |p7r — p”'°f|1 < 1—17 ESNPWf [KL(7r(S),7rref(S))1/2|S] = 117—.
+
+Combining this with the equation above, we complete the proof."
+"Proof of Proposition 4.6. Let u be the distribution of the initial s_tate SO, and let P’ and P be
+the state-to-state transition kernel under policy 7r and Wref. Let G = (1 — *7) 2,:0 *ykPk and
+
+G” = (1 — *7) 2,:0 'ykP’k. Unde_r these notations, we can re-write p7rref = 51/1 and p7r = G’u.
+Moreover, we observe that 37'“ = GPGM.
+
+Let 61 = (1 — 7)X2GM(P’, P)”2 and 62 = (1 — 7))E2GPGM(P’, P)1/_2 b): the X2 divergence between
+P’ and P, measured with respect to distributions 0/1 = p7rref and GPGM = 37'“. By Lemma C.l,"
+13

@@ -1,0 +1,73 @@
+4.2
+The Guide
+"Given a tourist message M describing their observations and actions, the objective of the guide is to
+predict the tourist’s location on the map. First, we outline the procedure for extracting observation
+embedding e and action embeddings at from the message M for each of the types of communication.
+Next, we discuss the MASC mechanism that takes the observations and actions in order to ground
+them on the guide’s map in order to predict the tourist’s location."
+"Continuous For the continuous communication model, we assign the observation message to the
+observation embedding, i.e. e = mObs. To extract the action embedding for time step t, we apply a
+linear layer to the action message, i.e. at = chtmact + bf“."
+"Discrete For discrete communication, we obtain observation e by applying a linear layer to the
+observation message, i.e. e = WObsmObs + b0“. Similar to the continuous communication model,
+we use a linear layer over action message mad to obtain action embedding at for time step t."
+"Natural Language The message M contains information about observations and actions, so we
+use a recurrent neural network with attention mechanism to extract the relevant observation and
+action embeddings. Speciﬁcally, we encode the message M, consisting of K tokens wk taken from
+
+vocabulary V, with a bidirectional LSTM:
+
+ﬂ=fLSTM(IE,EW(wk»; in? =fLSTM( k+1,EW(wk)); hk=[1T£;iTk] (2)
+
+where EW is the word embedding look-up table. We obtain observation embedding et through an
+a n n n m ' - - '
+
+h 1m r h qr, A , h
+sk = hk - ct; et = Zsoftmax(s)khk, (3)"
+"sk = hk - ct; et = Zsoftmax(s)khk, (3)
+k
+
+where co is a learned control embedding who is updated through a linear transformation of the
+previous control and observation embedding: ct+1 = Wcm[ct; et] + bet”. We use the same
+mechanism to extract the action embedding at from the hidden states. For the observation embedding,
+we obtain the ﬁnal representation by summing positionally gated embeddings, i.e., e = 231:0 =
+sigmoid(gt) (D et."
+(3)
+4.2.1
+Masked Attention for Spatial Convolutions (MASC)
+"We represent the guide’s map as U E RGIXG2XL, where in this case 01 = G2 = 4, where each
+L-dimensional (1:, y) location embedding uw’y is computed as the sum of the guide’s landmark
+embeddings for that location."
+"Motivation While the guide’s map representation contains only local landmark information, the
+tourist communicates a trajectory of the map (i.e. actions and observations from multiple locations),
+implying that directly comparing the tourist’s message with the individual landmark embeddings is
+probably suboptimal. Instead, we want to aggregate landmark information from surrounding locations
+by imputing trajectories over the map to predict locations. We propose a mechanism for translating
+landmark embeddings according to state transitions (left, right, up, down), which can be expressed as
+a 2D convolution over the map embeddings. For simplicity, let us assume that the map embedding U
+
+is l-dimensional, then a left action can be realized through application of the following 31:3 kernel:
+
+000
+
+(1) 8 8, which effectively shifts all values of U one position to the left. We propose to learn such
+
+state-transitions from the tourist message through a differentiable attention-mask over the spatial
+dimensions of a 3X3 convolution."
+"MASC We linearly project each predicted action embedding at to a 9-dimensional vector zt,
+normalize it by a softmax and subsequently reshape the vector into a 3X3 mask (Pt:
+
+#3 ¢% ¢?
+¢t= ¢? ¢? ¢i’- <4)
+
+#3 ¢Z #3
+We learn a 3X3 convolutional kernel W E R3X3XN XN, with N features, and apply the mask (1),: to
+the spatial dimensions of the convolution by ﬁrst broadcasting its values along the feature dimensions,
+i.e. (iﬂ’y’i’j = (NW, and subsequently taking the Hadamard product: Wt = in (D W. For each action
+
+step t, we then apply a 2D convolution with masked weight Wt to obtain a new map embedding
+Ut+1 = Ut * Wt, where we zero-pad the input to maintain identical spatial dimensions."
+2,5 = Wactat + bad,
+(ﬁt = softmax(zt),
+(4)
+

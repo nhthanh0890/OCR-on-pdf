@@ -1,0 +1,59 @@
+X2-Divergence Based Inequalities
+
+"Lemma C.1. Let S be a random variable over the domain 8. Let 7r and 7r’ be two policies and and
+A ~ 7r(- | S) andA’ ~ 7r’(- | S). LetY ~  | S,A) andY’ ~  | S,A’) be the random
+variables for the next states under two policies. Then,"
+1E [X20451 Y’IS)] S E [X2(A|S,A’|3)]
+(0.1)
+"Proof. By deﬁnition, we have that Y|S = s, A = a has the same density as Y’ |S = s, A’ = a for
+any a and 3. Therefore by Theorem D.4 (setting X, X’, Y, Y’ in Theorem D.4 by A|S = s, A’ |S = s,
+Y|S = 3, Y’ |S = s respectively), we have"
+X2(Y|S= s,Y'|s= s) s X2(A|S = s,A'|s= s)
+(0.2)
+Taking expectation over the randomness of S we complete the proof.
+
+C.1
+Properties of Markov Processes
+"In this subsection, we consider bounded the difference of the distributions induced by two markov
+process starting from the same initial distributions ii. Let P, P’ be two transition kern_e1s. Let
+G = 2,:0 *ykPk and G = (1 — *y)G. Deﬁne G’ and G’ similarly. Therefore we have that GM is the
+discounted distribution of states Visited by the markov process starting from distribution p. In other
+
+words, if u is the distribution of So, and P is the transition kernel induced by some policy 7r, then
+GM = p”."
+First of all, let A = 7(P’ — P) and we note that with simple algebraic manipulation,
+"GI
+— G
+_ (1 _
+7)—
+1
+G’A
+G"
+(0.3)
+"Let f be some function. We will mostly interested in the difference between ESNGM [f] and
+
+1E SNG, M [f], which can be rewritten as ((G’ — G) u, f We will bound this quantity from above by
+some divergence measure between P’ and P."
+"We start off with a simple lemma that controls the form (p — q, f 2 by the X2 divergence between p
+and q. With this lemma vge can reduce our problem of bounding ((G’ — G) u, f) to characterizing the
+X2 divergence between G’u and GM.
+
+Lemma C.2. Let p and q be probability distributions. Then we have"
+(q -10,f>2 S X2014?) - (19, f2)
+Proof. By Cauchy-Schwartz inequality, we have
+
+
+"The following Lemma is a reﬁnement of the lemma above. It deals with the distributions p and q
+with the special structure p = WP’ ,le and q = WPM.
+
+Lemma C.3. Let W, P’, P be transition kernels and ,le be a distribution. Then,
+<W(P’ — PM, f)2 : xi(P’, PXWP/J, f2) (0.4)"
+(0.4)
+"where 2 P’, P is a divergence between transitions deﬁned in Deﬁnition D.3.
+XM"
+"Proof. By Lemma C.2 with p = WPM and q = WP’ u, we conclude that
+<W(P’ - PM, f)2 S X2014?) - (19, f2) S X2(WP’M, WPMXWPM, f2)"
+(c5)
+"By Theorem D4 and Theorem D.5 we have that X2(WPIIU,, WP/J) g X2(P’p, PM) 3 xi(P’, P),
+plugging this into the equation above we complete the proof. El"
+15

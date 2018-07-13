@@ -1,0 +1,62 @@
+
+Model
+"We investigate localization, ﬁrst examining various architectures for the communication channel
+across which the tourist’s utterances are sent. We subsequently describe how these messages are
+processed by the guide. and introduce the novel Masked Attention for Spatial Convolutions (MASC)
+mechanism that allows for grounding tourist utterances into the guide’s map."
+4.1
+The Tourist
+"For each of the communication channels, we outline the procedure for generating a message M.
+
+Given a set of state observations {(0, . . . ,CT}, we represent each observation by summing the L-
+dimensional embeddings of the observed landmarks, i.e. for {00, . . . , 0T}, 0,: = Elect EA(l), where
+
+EA is the landmark embedding lookup table. In addition, we embed action at into a L-dimensional
+embedding at Via a look-up table EA. We experiment with three types of communication channel."
+"Continuous vectors The tourist has access to observations of several time steps, whose order is
+important for accurate localization. Because summing embeddings is order-invariant, we introduce
+a sum over positionally-gated embeddings, which, conditioned on time step t, pushes embedding
+information into the appropriate dimensions. More speciﬁcally, we generate an observation message
+
+mObs = 231:0 sigmoid(gt) (9 0t, where gt is a learned gating vector for time step t. In a similar
+
+fashion, we produce action message mad and send the concatenated vectors m = [m0b3; mad] as
+message to the guide. We can interpret continuous vector communication as a single, monolithic
+model because its architecture is end-to—end differentiable, enabling gradient-based optimization for
+training."
+"Discrete symbols Like the continuous vector communication model, with discrete communication
+
+the tourist also uses separate channels for observations and actions, as well as a sum over positionally
+gated embeddings to generate observation embedding ho“. We pass this embedding through a
+sigmoid and generate a message mObs by sampling from the resulting Bernoulli distributions:"
+"T
+h°bs = Z sigmoid(gt) (9 0t;
+t=O"
+Inng N Bernoulli(Sigm0id(hgbs))
+"The action message mact is produced in the same way, and we obtain the ﬁnal tourist message
+m = [m°b3; mact] through concatenating the messages.
+
+The communication channel’s sampling operation yields the model non-differentiable, so we use
+policy gradients [47, 48] to train the parameters 0 of the tourist model. That is, we estimate the
+gradient by"
+VgEm~p(h)  = Em[V6 10gp(m)  _ 19)]:
+"where the reward function r(m) = — log p(1:, y)tgt |m, A) is the negative guide’s loss (see Section
+4.2) and b a state-value baseline to reduce variance. We use a linear transformation over the con-
+catenated embeddings as baseline prediction, i.e. b = Wbase[h°bs; hact] + bbase, and train it with a
+mean squared error loss4."
+"Natural Language Because observations and actions are of variable-length, we use an LSTM
+
+encoder over the sequence of observations embeddings [04,231 , and extract its last hidden state how.
+
+We use a separate LSTM encoder for action embeddings [at]f=0, and concatenate both h°bs and had
+to the input of the LSTM decoder at each time step:"
+"ik = [Edec(wk_1); W; hm] hz“ = fLSTMot, hzia)
+
+p(wk|w<k, A, Z) = softmax(W°“th%ec + b‘""”)k,"
+(1)
+"where Ed“ a look-up table, taking input tokens wk. We train with teacher-forcing, i.e. we optimize
+the cross-entropy loss: — 2K log p(wk |w<k, A, Z At test time, we explore the following decoding
+strategies: greedy, sampling and a beam-search. We also ﬁne-tune a trained tourist model (starting
+from a pre-trained model) with policy gradients in order to minimize the guide’s prediction loss."
+4This is different from A2C which uses a state-value baseline that is trained by the Bellman residual
+

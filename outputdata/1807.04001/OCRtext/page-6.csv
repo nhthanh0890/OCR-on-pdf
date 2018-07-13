@@ -1,0 +1,49 @@
+Learning Neural Models for End-to—End Clustering
+
+"with weights 901 and 902. The idea behind the weighting is to account for the
+imbalance in the data due to there being more dissimilar than similar pairs (mi, mj)
+as the number of clusters in the mini batch exceeds 2. Hence, the weighting is
+computed using 901 = cx/l — go and 902 = cﬁ, with go being the expected value
+of yij (i.e., the a priori probability of any two samples in a mini batch coming
+from the same cluster), and c a normalization factor so that 901 + 902 = 2. The
+value go is computed over all possible cluster counts for a ﬁxed input example
+count n, as during training, the cluster count is randomly chosen for each mini
+batch according to a uniform distribution. The weighting of the cross entropy
+given by go is then used to make sure that the network does not converge to a
+sub-optimal and trivial minimum. Intuitively, we thus account for permutations in
+the sequence of examples by checking rather for pairwise correctness (probability
+of same/ different cluster) than speciﬁc indices.
+
+The second loss term, Lcc, penalizes a wrong number of clusters and is given
+by the categorical cross entropy of P(k) for the true number of clusters k in the
+current mini batch:"
+"LCC
+
+—10g(P(k))-"
+"The complete loss is given by Ltot = Lcc + ALca. During training, we prepare
+each mini batch with N sets of n input examples, each set with k = 1 . . . kmax
+clusters chosen uniformly. Note that this training procedure requires only the
+knowledge of yij and is thus also possible for weakly labeled data. All input
+examples are randomly shufﬂed for training and testing to avoid that the network
+learns a bias w.r.t. the input order. To demonstrate that the network really learns
+an intra-class distance and not just classiﬁes objects of a ﬁxed set of classes, it is
+applied on totally different clusters at evaluation time than seen during training."
+Implicit vs. explicit distance learning
+3.3
+"To elucidate the importance and validity of the implicit learning of distances in our
+subnetwork (b), we also provide a modiﬁed version of our network architecture for
+comparison, in which the calculation of the distances is done explicitly. Therefore,
+we add an extra component to the network before the RBDLSTM layers, as can
+be seen in Figure 3: the optional metric learning block receives the ﬁxed-size
+embeddings from the fully connected layer after the embedding network (a) as
+input and outputs the pairwise distances of the data points. The recurrent layers
+in block (b) then subsequently cluster the data points based on this pairwise
+distance information [6,3] provided by the metric learning block.
+
+We construct a novel metric learning block inspired by the work of Xing et al.
+[41]. In contrast to their work, we optimize it end-to—end with backpropagation.
+This has been proposed in [33] for classiﬁcation alone; we do it here for a clustering
+task, for the whole covariance matrix, and jointly with the rest of our network.
+We construct the non-symmetric, non-negative dissimilarity measure d3, between
+two data points 1:,- and my as"
+«131mm» = (mi — mj)TA($i — 173')

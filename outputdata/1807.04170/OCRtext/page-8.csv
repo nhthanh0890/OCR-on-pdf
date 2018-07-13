@@ -1,0 +1,59 @@
+"ence postures and on the distance that characterizes the tolerance volume. Case 4
+illustrates this situation: set {Pregb Prem} is chosen as the partial decision.
+
+Another constraint is added in order to perform the decision. The nature of the
+robot's action associated to the command posture is able to inﬂuence the decision
+process. To illustrate this, we consider two classes of actions (each corresponding
+to a reference posture): one class contains ""classical"" actions and the second
+""emergency"" actions, corresponding respectively to a ""classical"" reference posture
+and an ""emergency"" reference posture. So when an ""emergency"" reference posture
+is detected even with a lower mass than a classical detected reference posture, the
+selected decision is the corresponding ""emergency"" action. From this considera-
+tion, either the nearest emergency reference posture is selected — see case 5 of fig.
+4; or the consumer constraint reduces the set of possible recognized postures to the
+emergency related one. This situation is similar to case 2 approach, but with corre-
+sponding emergency postures only."
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fig. 4 Illustration of tolerance volume and the impact on decision
+"Let's look at an applicative example on posture recognition: 3 reference pos-
+tures named pointing, standing and protect are performed and measured, then
+translated into LFSs on LPWWI. Ppmmg, Pslandmg and Ppmm to denote the 3 refer-
+ence postures. These are illustrated in ﬁg 7. A d5 distance is deﬁned on the lexical
+set of modal postures medaz . This distance is arbitrarily chosen in order to re-
+spect some constraints:
+
+The larger distance between 2 modal terms is arbitrarily fixed to 3.0.
+The smaller distance between 2 modal terms related to the same elbow
+angle, therefore only related to the different shoulder angles, is ﬁxed to
+1.0.
+
+E' The smaller distance between 2 modal terms related to the same shoulder
+angle, therefore only related to the different elbow angles, is ﬁxed to 0.5.
+
+Then d5 is extended to a dig distance on the LFSs on medaz, as presented in 2.1.
+First the distance between reference postures is computed:
+
+dIS(Pp0inlmg, Pslandmg) : 
+
+,S(Ppamling, Ppralecl) : 
+
+dIS(Pslanding, Ppralecl) : 
+
+As expected the pointing and standing postures are closer to each other than to
+the protect posture. A new P1 posture to be recognized is acquired then fuzziﬁed
+to produce an LFS. In this example, we take a stop posture (see fig. 6)."
+
+
+

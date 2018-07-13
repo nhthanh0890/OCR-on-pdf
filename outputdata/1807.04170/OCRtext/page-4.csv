@@ -1,0 +1,82 @@
+"arm is level in front of the human's body. The LFS of a-iheia is {down, horizon,
+up} and the LFS of a-psi angle is {rean outside, front, inside}. Fig. 2 illustrates
+the a-iheia and a-psi angle lexical posture determination from respective angle
+measurements. In this step, we present the concept of modal angle values that de-
+ﬁne representative angles. A modal angle is deﬁned such that the LFS obtained by
+the fuzzy linguistic description is a singleton."
+"down harizon up
+
+ 
+
+0: 90° 180°"
+"rear outside from inside
+
+a-rhem
+
+ 
+
+a-psi
+
+-90” O” -90”"
+Fig. 2 Sub-lexical for arm posture from the a—theta angle value and the a—psi angle value.
+"Then, the arm posture is represented by the combination of these 2 lexical sub-
+sets, corresponding to the 2 a-tehta and a-psi angles.
+The arm corresponding variable takes its values in the lexical set Lam, (l):"
+Lam, = {down front, up, outside, rear, inside}
+(1)
+Table 1 (left) gives the arm position rules from these lexical subsets.
+"Table 1. Arm and forearm posture definition rules
+
+ 
+
+ 
+
+a-tetha
+arm .
+down horizon up
+rear down rear up
+
+ 
+
+ 
+
+a-
+
+front up
+
+ 
+
+inside up
+
+ 
+
+7) outside ‘ down ‘ outside ‘ up"
+arm
+
+"'
+close middle open
+vertical close vmiddle ‘ open ‘
+
+ 
+
+.—
+m
+9:
+
+‘4—1
+
+ 
+
+horizontal close hmiddle ‘ open ‘"
+forearm
+"2) Forearm modeling
+
+A similar process of arm modeling is done for the forearm part. 2 angles are
+used: f-tetha which corresponds to the angle formed by the forearm axis and arm
+axis and f-psi, which corresponds to the position relative to the horizon. The fuzzi-
+f1cation process is the same as the arm part and is not detailed in this paper. The
+forearm corresponding variable takes its values in the lexical set Lfmarm (2):"
+Lfmarm = {0pm, vclose, hclose, vmiddle, hmiddle}
+(2)
+"Table 1 (light) represents the position rules from the lexical subset correspond-
+ing to f-theta and f-psi ."

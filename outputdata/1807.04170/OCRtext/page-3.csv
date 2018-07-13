@@ -1,0 +1,38 @@
+"these is communication through postures that can be described with words. Fig. 1
+(left) illustrates the posture ""hello"" in a 2D representation of the body detected by
+the depth sensor and the measured joints. This particularity of postures makes it
+possible to describe them with fuzzy nominal scales.
+
+The depth camera sensor (the Asus Xtion Pro Live) produces posture detection
+using NiTE library. The result of this process is a set of 3D joint positions that we
+call the measured skeleton.
+
+We illustrate our approach with a right upper limb detection posture. To ex-
+press the human posture representation, we decompose arm and forearm represen-
+tation into 2 corresponding intermediate high-level representations which are ex-
+pressed using words. Human posture and high-level representations of arm and
+forearm measurement are linked by rules as shown below.
+
+Each body part (i.e. the arm and forearm) are expressed using words. The an-
+gles pertaining to the arm and forearm are computed from the joint positions of the
+detected skeleton. Lexical sets are chosen to have simple and easily understanda-
+ble descriptions. Each part (i.e. the arm and forearm) is characterized by the 2
+measured angles from the position of the joints, as illustrated in ﬁg. 1. We also use
+lexical fuzzy subsets as shown below.
+
+In this section, we present arm forearm modeling from respective angles meas-
+urement of skeleton. LFS are used. Arm and forearm posture definition rules are
+detailed. Then, right limb modeling is detailed using LFS too and corresponding
+rules are detailed too."
+- armhforearm
+"from rear
+
+a—ps1"
+
+"Fig. 1 2D representation of 3D measurements of joints for the ""hello"" posture (left) and used
+angles from skeleton (right)."
+"1) Arm modeling
+
+For arm angle measurement, we use a-tetha angle and a-psi angle. The a-tetha
+angle corresponds to the angle formed from the vertical to the arm, in the plane of
+the human body. a-psi is the angle formed from the vertical to the arm when the"

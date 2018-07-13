@@ -1,0 +1,54 @@
+"actions) before they successfully complete the task. The majority of acts comprise the tourist’s
+actions, with on average more than 44 actions per dialogue. The guide produces roughly 9 utterances
+per dialogue, slightly more than the tourist’s 8 utterances. Turkers use diverse discourse, with a
+vocabulary size of more than 10K. An example from the dataset is shown in Appendix G."
+
+Experiments
+"The ﬁnal end-to-end Talk The Walk task is challenging and the full solution is an open problem that
+we pose to the community. Here, we focus on studying localization, exploring models with emergent
+and natural language communication, and use localization models to provide baselines for the full
+task. In order to make headway, in what follows we make the following simplifying assumptions:"
+"Perfect Perception Early experiments revealed that perceptual grounding of landmarks is difﬁcult:
+we set up a landmark classiﬁcation problem, on which models with extracted CNN [25] or text
+recognition features [20] barely outperform a random baseline—see Appendix F for full details. To
+ensure that perception is not the limiting factor when investigating localization capabilities of models,
+we assume “perfect perception”: in lieu of the 360 image View, the tourist is given the landmarks at
+its current location. More formally, each state observation 8”“ now equals the set of landmarks at
+the (1:, y)-location, i.e. Sw’y’o = Aw’y. If the (1:, y)-location does not have any visible landmarks, we
+return a single “empty comer” symbol."
+"Orientation-agnostic tourist We opt to ignore the tourist’s orientation, which simpliﬁes the set
+of actions to [Left, Right, Up, Down], corresponding to adding [(-1, 0), (l, 0), (0, l), (0, -l)] to the
+current (1:, y) coordinates, respectively. Note that actions are now coupled to an orientation on the
+map—e. g. up is equal to going north—and this implicitly assumes that the tourist has access to a
+compass. This also affects perception, since the tourist now has access to Views from all orientations:
+in conjunction with “perfect perception”, implying that only landmarks at the current comer are given,
+whereas landmarks from different comers (e. g. across the street) are not Visible."
+3.1
+Tourist Localization
+"Arguably the most important subtask of Talk The Walk is localization: without being able to localize
+the tourist, the guide cannot tell if the target location has been reached. Here, we investigate tourist
+localization with communication in the form of continuous vectors, discrete symbols and natural
+language."
+"Emergent language A tourist, starting from a random location, takes T Z 0 random actions
+A = {040, . . . ,aT_1} to reach target location (mtgt, ytgt). Every location in the environment has a
+corresponding set of landmarks A“; = {10, . . . , 1K} for each of the (1:, y) coordinates. As the tourist
+navigates, the agent perceives T + 1 state-observations Z = {(0, . . . ,(T} where each observation (t
+consists of a set of K landmark symbols {13, . . . ,l’g}. Given the observations Z and actions A, the
+tourist generates a message M which is communicated to the other agent. The objective of the guide
+is to predict the location (mtgt, ytgt) from the tourist’s message M."
+"Natural language In contrast to our emergent communication experiments, we do not take random
+actions but instead extract actions, observations, and messages from the dataset. Speciﬁcally, we
+consider each tourist utterance (i.e. at any point in the dialogue), obtain the current tourist location
+as target location (1:, y)tgt, the utterance itself as message M, and the sequence of observations and
+actions that took place between the current and previous tourist utterance as Z and A, respectively.
+Similar to the emergent language setting, the guide’s objective is to predict the target location (1:, y)tgt
+models from the tourist message M. We conduct experiments with M taken from the dataset and
+with M generated from the extracted observations Z and actions A."
+3.2
+Full Task
+"We establish baselines for the full navigation task by letting trained localization models undertake
+random walks, using the following protocol: at each step, the tourist connnunicates its observations
+to the guide, who predicts the tourist’s location. If the guide predicts that the tourist is at target, we
+evaluate its location. If successful, the task ends, otherwise we continue until there have been three
+wrong evaluations. The protocol is given as pseudo-code in Appendix E."
+

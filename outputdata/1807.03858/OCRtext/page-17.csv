@@ -1,0 +1,73 @@
+"Proof. We denote py/IX  by p’(y | at) and pYIX  by p(y|m), and let p(m) be a simpliﬁcation
+for p We have by Cauchy-Schwarz,"
+
+(D.9)
+It follows that
+p(m)dmdy — 1 = E [X2(Y|XaYl|X) I X]
+(D.10)
+
+"Claim D.6. Let u be a distribution over the state space 8. Let P and P’ be two transition kernels.
+G = 22°=owP>k = (Id — 713W and G' = Ziowp'r = (Id — 7133-1. Let d = (1 — wait
+and d’ = (1 — 'y)G’/J be the discounted distribution starting from u induced by the transition kernels
+G and G’. Then,"
+"Id-
+d’ll S L
+_7|Aal|1"
+(D.11)
+Moreover, let 7(P’ — P) = A. Then, we have
+"a]
+— G
+(G
+AVG
+
+EM
+8"
+(D.12)
+Proof. With algebraic manipulation, we obtain,
+"a]
+— G
+: (Id
+G’A— 7
+G Pl)—
+1
+((1
+d
+*yP
+) _
+(Id
+713%
+Id
+)—1"
+(D.13)
+It follows that
+"ld— d’l1 = (1 —7)|G'AG/~tl1 S IAGM|1
+1
+= — Ad
+1_7| |1"
+(since (1 — *y)|G’|1_)1 g 1)
+"Replacing G’ in the RHS of the equation (D.13) by G’ = G + G’AG, and doing this recursively
+gives"
+"a]
+— G
+(G
+AVG
+
+EM
+8"
+
+Corollary D.7. Let 7r and 7r’ be two policies and let p7r be deﬁned as in Deﬁnition 2.1. Then,
+
+(D.14)
+"Proof. Let P and P’ be the state-state transition matrix under policy 7r and 7r’ and A = 7(P’ — P)
+By Claim D.6, we have that"
+"Tu W, <—Aﬂ =— 7‘ * 7r - * 7r, D.15
+lp p l1_1—7| p '1 1—vs~p«[lpM<Si (SDIS PM<s, (smsld ( )
+7
+< “ 7r — «I D.16
+— 1—VSNM Up (SNS P (S)Is|1] ( )
+S 7 7‘ [KL(7F(S),7FI(S))1/2|S] (byPinkser’sinequaljty)
+1—’YS~p7r"
+(D.15)
+(D.16)
+
+18

@@ -1,0 +1,164 @@
+"#utterances
+
+Random
+
+MASC
+
+\>< \>< \><
+
+Train
+6.25
+
+23.95
+23.46
+
+26.92
+20.88
+
+25.75
+30.45
+
+Valid Test
+6.25 6.25
+
+13.91 13.89
+15.56 16.17
+
+16.28 16.62
+17.50 18.80
+
+16.11 16.88
+18.41 20.33
+
+E [T]
+
+0.99
+1.00
+
+1.00
+1.79
+
+1.98
+1.99"
+
+
+
+"Table 5: Localization given last {1, 3, 5} dialogue utterances (including the guide). We observe that
+1) performance increases when more utterances are included; and 2) MASC outperforms no-MASC
+
+in all cases; and 3) mean if increases when more dialogue context is included."
+"Beam size
+
+Train
+6.25
+
+Valid
+6.25
+
+Test
+6.25
+
+Random
+
+OOJ>NH
+
+34.14
+26.24
+23.59
+20.31
+
+29.90
+23.65
+22.87
+19.24
+
+29.05
+25.10
+21.80
+20.87"
+"Trajectories
+
+Random
+
+Human
+
+T
+
+WNv—‘O va—lo
+
+Train
+18.75
+
+38.21
+21.82
+19.77
+18.95
+
+39.65
+28.99
+27.04
+20.28
+
+Valid
+18.75
+
+40.93
+23.75
+24.68
+20.93
+
+39.68
+30.93
+19.06
+20.93
+
+Test
+18 .75
+
+40.00
+25.62
+23.12
+20.00
+
+50.00
+25.62
+19.38
+22.50"
+Human
+
+"Table 6: Localization performance using pre-
+trained tourist (Via imitation learning) with beam
+search decoding of varying beam size. We ﬁnd
+
+that larger beam-sizes lead to worse localization
+performance.
+
+Table 7: Full task performance of localization
+models trained on human and random trajecto-
+ries. There are small beneﬁts for training on ran-
+dom trajectories, but the most important hyper-
+parameter is to condition the tourist utterance
+
+on a single observation (i.e. trajectories of size
+T = 0.)"
+"Human vs random trajectories So far, all natural language experiments have been conducted
+on human trajectories (taken from the dataset). However, during full task evaluation the tourist
+undertakes a random walk which is probably very different from human trajectories. To investigate
+the impact of different train and test trajectories, we also train agents to perform localization on
+random trajectories. Speciﬁcally, we use a pre-trained tourist model with greedy decoding, and train
+a guide model on random trajectories of varying length T. After optimization, we evaluate the trained
+tourist and guide on the full task, and compare performance to models trained on human trajectories.
+Table 7 shows the results. We observe small improvements for training on random trajectories over
+human trajectories. However, by far the most important factor for strong performance is to use short
+trajectories of size T = 0, i.e. to condition the tourist model on a single observation."
+Additional Analysis
+
+"In this section, we provide additional analysis of the trained MASC models. First, we visualize the
+learned MASC values for one of the emergent communication models. Next, we analyze samples of
+tourist models communicating in natural language."
+"Visualizing MASC predictions Figure 2 shows the MASC values for a learned model with emer-
+gent discrete communications and T = 3 actions. Speciﬁcally, we look at the predicted MASC values
+for different action sequences taken by the tourist. We observe that the ﬁrst action is always mapped
+to the correct state-transition, but that the second and third MASC values do not always correspond
+to right state-transitions."
+13

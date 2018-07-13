@@ -1,0 +1,40 @@
+"Method Decoding ‘ Utterance
+Observations (Bar)
+Actions -
+Human ‘ a ﬁeld of some type
+greedy at a bar
+sampling sec just hard to tell which is a restaurant ?
+beam search im at a bar
+
+ 
+
+ 
+
+P he Grad greedy bar from bar from bar and rigth rigth bulding bulding
+sampling which bar from bar from bar and bar rigth bulding bulding.."
+Supervised
+Policy Grad.
+Table 8: Samples from the tourist models communicating in natural language.
+"Analyzing tourist samples Table 8 shows samples of the trained tourist models, illustrating the
+differences between them. First, we observe that the ground-truth human utterance and vanilla
+sampling of the supervised model does not always ground the message into the observations. For
+example, the human utterance does not mention the bar, neither does the vanilla sample (which
+mentions a restaurant). By contrast, greedy and beam-search decoding both produce samples that
+mention that they are at the bar (the observed landmark). Also the policy gradient model mentions
+the observed landmark, but the generated sample has lost some linguistic structure."
+
+
+
+"Action sequence:
+Right, Left, Up"
+
+
+
+"Action sequence:
+Up, Right, Down"
+"Figure 2: We show MASC values of two action sequences for tourist localization Via discrete
+communication with T = 3 actions. In general, we observe that the ﬁrst action always corresponds
+to the correct state—transition, whereas the second and third are sometimes mixed. For instance, in the
+top example, the ﬁrst two actions are correctly predicted but the third action is not (as the MASC
+corresponds to a “no action”). In the bottom example, the second action appears as the third MASC."
+14

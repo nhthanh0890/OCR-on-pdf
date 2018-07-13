@@ -1,0 +1,42 @@
+Discussion and Future Work
+
+"There are several problems and possible improvements of this model. First, the model doesn’t
+involve the human characteristics in figure 7. Some people prefer walking to and stay in quiet
+spaces while others prefer crowd spaces. Some people love following other people while
+others doesn’t. Some people like exploring the space and walk toward the target in their vision
+fields while others like to look at maps."
+prefer quiet space
+prefer following
+prefer using map
+prefer crowd space
+prefer walking alone
+prefer exploring
+Figure 7: More human characteristics.
+"Second, there is a bug in the model for collision prediction. When an agent tries to move
+toward the target and figures out that it will collide with another one, the agent will wait at the
+same location until safe. The bug is that two agents will halt when they are waiting for each
+other. The model needs a better collision prediction mechanism and an algorithm that can
+repair the planning path dynamically (e. g. anytime repairing A* search [2]). But in fact, the
+bug seldom shows up in the simulation because of the random noise added in the heuristic
+function."
+"Third, in architecture design, architects are not only interested in simulating one floorplan but
+also the entire building. The model now only considers the horizontal relationship (floorplan)
+in the building. In real situation, vertical relationships (elevation) also affect human moving
+paths. For instance, a space (e. g. a high-ceiling atrium) that has a broader view of multiple
+
+ﬂoors is more likely to attract people."
+Conclusion
+
+"This paper presents a human moving path simulator, SimArch, for architecture design.
+SimArch uses a Markov Decision Process as the behavior model. The model involves human
+mental states, target range detection, and collision prediction. It also models different human
+characteristics by assigning different transition probabilities. A modified weighted A* search
+algorithm quickly computes the sub-optimal moving path. SimArch takes a series of
+preprocessed gallery ﬂoorplans as inputs, uses the behavior model for simulation, and outputs
+a density map for evaluation Which helps architects to improve the ﬂoorplan design."
+References
+[1]Eugene F. Krause (1987). Taxicab Geometry. Dover. ISBN 0-486-25202-7.
+"[2]Likhachev, M., & Gordon, G. (2003). ARA*: Anytime A* with provable bounds on sub-optimality.
+Advances in Neural Information. Retrieved from"
+"[3]Mukai, N., Honma, H., & Kosugi, M. (n.d.). Generation of Dynamic Moving Path for Autonomous
+Human Model, 1(c), 3058-3063."

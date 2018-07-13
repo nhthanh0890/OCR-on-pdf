@@ -1,0 +1,67 @@
+Proof. Since D and d satisfy equation (R1), we have that
+"Vnk+1,M* Z Vﬂk+1ij+1 _ D M
+7rk( k+177rk+1)"
+By the deﬁnition that 7rk+1 and M k+1 are the optimizers of equation (3.3), we have that
+V7rk+laMk+1 _ D7”c (Mk+1,7rk+1) Z Vﬂk,M* _ D7”c (M*,7rk)
+(by equation R2)
+Combing the two equations above we complete the proof of equation (3.5).
+"For the second part of the theorem, by compactness, we have that a subsequence of m, converges
+to some 7?. By the monotonicity we have VW’S’IW S Vﬁ’lw for every k 2 0. For the sake of
+contradiction, we assume 7? is a not a local maximum, then in the neighborhood of 7? there exists 7r’
+such that VW’JW > WM and d(7‘r, 7H) < 6/2. Let t be such that 7t, is in the 6/2-neighborhood of
+7?. Then we see that (7r’ , M *) is a better solution than (n+1, Mt+1) for the optimization in iteration t
+because V”,’M* > Vﬁ’lw Z V”t+1’M* Z V”t+1’M*+1 — D,” (Mt+1, 7rt). (Here the last inequality
+uses equation (R1).) This contradicts the assumption that 7? is a local maximum. Therefore 7? is a
+local maximum and we complete the proof."
+
+
+Discrepancy Bounds Design
+"In this section, we design discrepancy bounds that can provably satisfy the requirements (R1), (R2),
+and (R3). We design increasingly stronger discrepancy bounds from Section 4.1 to Section 4.3."
+4.1
+Norm-based prediction error bounds
+"In this subsection, we derive the discrepancy bound D of the form (5', A) — M *(S’, A) averaged
+
+over the observed state-action pair (5', A) under certain conditions on the dynamical model M. This
+suggests that we should not use the mean— squared error for learning the model, and instead, we should
+use the norm itself as the metric. In section 6, we will demonstrate that the £2 norm error consistently
+outperforms the square of £2 norm. Through the derivation, we will also introduce a telescoping
+lemma, which serves as the main building block towards other ﬁner discrepancy bounds."
+"In this subsection, we make the (strong) assumption that the imaginary value function V7""M is
+L-Lipschitz w.r.t to some norm  -  in the sense that"
+"A
+
+V8, 3' e s, |V”’1‘7(s) — V”’M(s’)| g L - ||s — s'u"
+(4.1)
+"In other words, nearby starting points should give similar rewards under the same policy 7r. We
+note that not every real environment M * has this property, let alone imaginary dynamical models.
+However, once the real dynamical model gives a Lipschitz value function, we can penalize the
+Lipschitz-ness of the imaginary model during the training."
+"We start off with a lemma showing that the expected prediction error is an upper bound of the
+discrepancy between the real and imaginary values.
+
+Lemma 4.1. Suppose V7“? is L-Lipschitz (in the sense of (4.1)). Recall n = 7(1 — 'y)_1. Then,
+we have"
+"[W6 A) — ms, AMI]
+_ E ,
+JSNP""r
+
+A~7r(-|S)"
+"IVWJT/f
+_ V7r,M*
+
+ 
+
+SNL"
+(4.2)
+"However, in RHS in equation 4.2 cannot serve as a discrepancy bound because it doesn’t satisfy the
+requirement (R3) — to optimize it over 7r we need to collect samples from every possible p”, the
+state distribution of the policy 7r on the real model M *. The main proposition of this subsection
+stated next shows that for every 7r in the neighborhood of a reference policy Wref, we can replace the
+distribution p7r be a ﬁxed distribution p7rref with incurring only a higher order approximation. We use
+the expected KL divergence between two 7r and mef to deﬁne the neighborhood:"
+"dKL(7r,7rref)= IE [KL(7r(.|3),Wref(_|3))1/2]
+
+s~p7r"
+(4.3)
+

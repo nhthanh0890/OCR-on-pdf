@@ -1,0 +1,48 @@
+Meier, Elezi, Amirian, Dﬁrr & Stadelmann
+
+"clustering phase. The core of all deep metric embedding models is the choice of the
+loss function. Motivated by the fact that the softmax—cross entropy loss function
+has been designed as a classiﬁcation loss and is not suitable for the clustering
+problem per se, Chopra et al. [7] developed a “Siamese” architecture, where
+the loss function is optimized in a way to generate similar features for objects
+belonging to the same class, and dissimilar features for objects belonging to
+different classes. A closely related loss function called “triplet loss” has been used
+by Schroﬁ et al. [32] to get state-of—the—art accuracy in face detection. The main
+difference from the Siamese architecture is that in the latter case, the network
+sees same and different class objects with every example. It is then optimized to
+jointly learn their feature representation. A problem of both approaches is that
+they are typically diﬂicult to train compared to a standard cross entropy loss.
+
+Song et al. [37] developed an algorithm for taking full advantage of all
+the information available in training batches. They later reﬁned the work [36]
+by proposing a new metric learning scheme based on structured prediction,
+which is designed to optimize a clustering quality metric (normalized mutual
+information [27]). Even better results were achieved by Wong et al. [38], where
+the authors proposed a novel angular loss, and achieved state-of—the—art results
+on the challenging real-world datasets Stanford Cars [17] and Caltech Birds 
+On the other hand, Lukic et al. [23] showed that for certain problems, a carefully
+chosen deep neural network can simply be trained with softmax—cross entropy loss
+and still achieve state-of-the-art performance in challenging problems like speaker
+clustering. Alternatively, Wu et al. [26] showed that state-of—the—art results can
+be achieved simply by using a traditional margin loss function and being careful
+on how sampling is performed during the creation of mini-batches.
+
+On the other hand, attempts have been made recently that are more similar
+to ours in spirit, using deep neural networks only and performing clustering
+end-to—end  They are trained in a fully unsupervised fashion, hence solve a
+different task then the one we motivated above (that is inspired by speaker— or
+image clustering based on some human notion of similarity). Perhaps ﬁrst to
+group objects together in an unsupervised deep learning based manner where Le
+et al. [18], detecting high-level concepts like cats or humans. Xie et al. [40] used
+an autoencoder architecture to do clustering, but experimental evaluated it only
+simplistic datasets like MNIST. CNN-based approaches followed, e.g. by Yang
+et al. [42], where clustering and feature representation are optimized together.
+Greﬁ et al. [10] performed perceptual grouping (of pixels within an image into
+the objects constituting the complete image, hence a different task than ours)
+fully unsupervised using a neural expectation maximization algorithm. Our work
+differs from above-mentioned works in several respects: it has no assumption on
+the type of data, and solves the different task of grouping whole input objects."
+A model for end-to-end clustering of arbitrary data
+
+"Our method learns to cluster end-to-end purely ab initio, without the need to
+explicitly specify a notion of similarity, only providing the information whether"

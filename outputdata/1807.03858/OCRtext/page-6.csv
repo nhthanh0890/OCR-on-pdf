@@ -1,0 +1,68 @@
+We will show that the following discrepancy bound ngf(ﬁ, 7r satisﬁes the property (R1), (R2).
+"DG (ﬁ, 7r) = n - 51 + n26emax
+
+“ref"
+(4.8)
+"Proposition 4.4. Let dKL and DG be deﬁned as in equation (4.3) and (4.8). Then the choice d = dKL
+and D = DG satisﬁes the basic requirements (equation (R1) and (R2) )."
+"The proof follows from the telescoping lemma (Lemma 4.3) and is deferred to Section B. We remark
+that the ﬁrst term H51 can in principle be estimated and optimized approximately: the expectation be
+
+replaced by empirical samples from pm”, and GW’M is an analytical function of 7r and IT? when they
+are both deterministic, and therefore can be optimized by back-propagation through time (BPTT).
+
+(When 7r and M and are stochastic with a re-parameterizable noise such as Gaussian distribution [18],
+we can also use back-propagation to estimate the gradient.) The second term in equation (4.8) is
+difﬁcult to optimize because it involves the maximum. However, it can be in theory considered
+as a second-order term because 6 can be chosen to be a fairly small number. We note that the n2
+dependency in the second term (4.8) could in theory force us to choose 6 = 1/.‘s, which is practically
+very conservative. To address this, we improve the dependency on both n and 6 in the next subsection
+with a stronger bound. (Empirically, we also found that the constraint (3.4) can be removed, which
+suggests that even the improved bound in the next subsection is far from tight.)"
+"Besides BP’IT, Gm]? can also potentially be optimized in a actor-critic framework. Recall that G is
+
+precisely the difference between the imaginary critics on 1T? (5', A) and M *(S, A). Therefore, one
+could potentially build a critic from temporal difference learning and use the critic to penalize the
+learning of the dynamical model."
+"Attentive readers may notice that an adversarial dynamical model IT? can make GW’M equal to zero
+by constantly predicting some ﬁxed states with constant reward (and therefore the imaginary value
+function is constant and G is zero.) However, optimism comes into play here: such “cheating”
+dynamical model admittedly can fool the discrepancy bound, but it won’t give high imaginary reward
+
+V7""M . By optimizing V — D over the model and policy, we discourage the algorithm to ﬁnd such a
+cheating solution."
+4.3
+Reﬁned bounds
+"The theoretical limitation of the discrepancy bound DGUTJ: 7r) is that the second term involving emax
+is not rigorously optimizable by stochastic samples. In the worst case, there seem to exist situations
+
+where such inﬁnity norm of GW’M is inevitable. In this section we tighten the discrepancy bounds
+with a different closeness measure d, X2-divergence, in the policy space, and the dependency on the
+emax is smaller (though not entirely removed.) We note that X2-divergence has the same second order
+
+approximation as KL—divergence around the local neighborhood the reference policy and thus locally
+affects the optimization much."
+"We start by deﬁning a re—weighted version 3” of the distribution p7r Where examples in later step are
+slightly weighted up. We can effectively sample from 3” by importance sampling from p7r
+
+Deﬁnition 4.5. For a policy 7r, deﬁne 3” as the re-weighted version of discounted distribution of
+the states Visited by 7r on M *. Recall that p53 is the distribution of the state at step t, we deﬁne
+
+3” = (1 — ’02 2:1 t’Yt_1Ps;r-"
+Then we are ready to state our discrepancy bound. Let
+dX (7T,7l'ref) = ma,x{s~]Emef [X2(7r(-|S),7rref(‘|3))] aSNI/gw [X2(7r(‘|3),7rref(‘|3))]}
+(4.9)
+"DX2 A
+(M, 7r)
+= [$61
++ MS
+52 +KI3/2
+6165/25
+max
+
+“ref"
+(4.10)
+Where 62 = ESN/amf [f2] and 51, emax are deﬁned in equation (4.7).
+"Proposition 4.6. The discrepancy bound DX2 and closeness measure (1""2 satisﬁes requirements
+(R1) and (R2)."
+

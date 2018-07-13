@@ -1,0 +1,105 @@
+"Project
+
+Perception
+Real
+
+Action
+X
+
+Language
+
+Human
+
+Dialogue
+
+Size
+
+Visual Dialog [13]
+
+GuessWhat [15]
+VNL [2]
+Embodied QA [12]
+TalkTheWalk
+
+Real
+Real
+Simulated
+Real
+
+X
+I
+
+I
+J
+
+Human
+Human
+Scripted
+Human
+
+\‘<‘<'\'\
+
+120k dialogues
+131k dialogues
+23k instructions
+
+5k questions
+10k dialogues"
+Table 1: Talk The Walk grounds human generated dialogue in (real-life) perception and action.
+"The guide observes a map that corresponds to the tourist’s environment. We exploit the fact that urban
+areas like NYC are full of local businesses, and overlay the map with these landmarks as localization
+points for our task. Speciﬁcally, we manually annotate each corner of the intersection with a set of
+landmarks A“; = {10, . . . , 1K}, each coming from one of the following categories:
+
+0 Bank 0 Shop 0 Coffee Shop
+0 Playﬁeld 0 Subway 0 Restaurant
+
+The right-side of Figure 1 illustrates how the map is presented. Note that within-intersection
+transitions have a smaller grid distance than transitions to new intersections. The coarseness of
+the landmarks ensures that no single landmark uniquely identiﬁes the location of the tourist. That
+is, the dialogue is driven by uncertainty in the tourist’s current location and the properties of the
+target location: if the exact location and orientation of the tourist were known, it would sufﬁce to
+communicate a sequence of actions."
+oBar
+"0 Coffee Shop
+0 Restaurant"
+0 Theater
+0 Hotel
+2.1
+Task
+"For the Talk The Walk task, we randomly choose one of the ﬁve neighborhoods, and subsample a 4X4
+grid (one block with four complete intersections) from the entire grid. We specify the boundaries
+of the grid by the top-left and bottom-right corners (mm-n, ymm, mm”, ymaw). Next, we construct
+
+the overhead map of the environment, i.e. {Aw/’14,} with cumin 3 m’ 3 mm” and ymm < y’ 3 gm”.
+
+We subsequently sample a start location and orientation (1:, y, o) and a target location (1:, y)tgt at
+random3."
+"The shared goal of the two agents is to navigate the tourist to the target location (1:, y)tgt, which
+is only known to the guide. The tourist perceives a “street view” planar projection SW”, of the
+360 image at location (1:, y) and can simultaneously chat with the guide and navigate through the
+environment. The guide’s role consists of reading the tourist description of the environment, building
+a “mental map” of their current position and providing instructions for navigating towards the target
+location. Whenever the guide believes that the tourist has reached the target location, they instruct
+the system to evaluate the tourist’s location. The task ends when the evaluation is successful—i.e.,
+when (1:, y) = (1:, y)tgt—or otherwise continues until a total of three failed attempts. The additional
+attempts are meant to ease the task for humans, as we found that they otherwise often fail at the task
+but still end up close to the target location, e.g., at the wrong comer of the correct intersection."
+2.2
+Data Collection
+"We crowd-sourced the collection of the dataset on Amazon Mechanical Turk (MTurk). We use
+the MTurk interface of ParlAI [38] to render 360 images via WebGL and dynamically display
+neighborhood maps with an HTMLS canvas. Detailed task instructions, which were also given to our
+workers before they started their task, are shown in Appendix H. We paired Turkers at random and
+
+let them alternate between the tourist and guide role across different HITs. Data was collected over
+several weeks."
+2.3
+Dataset Statistics
+"The Talk The Walk dataset consists of over 10k successful dialogues—see Table 11 in the appendix
+for the dataset statistics split by neighborhood. More than six hundred Turkers successfully completed
+at least one Talk The Walk HIT. On average, Turkers needed more than 62 acts (i.e utterances and"
+"3Note that we do not include the orientation in the target, as we found in early experiments that this led to an
+unnatural task for humans. Similarly, we explored bigger grid sizes but found these to be too difﬁcult for most
+annotators."
+

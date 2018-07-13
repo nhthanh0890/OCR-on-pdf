@@ -1,0 +1,56 @@
+Testing and debugging ﬁltering of global constraints
+
+"Many constraint implementations are stateful and maintain some reversible
+data structures. Indeed, global constraints’ ﬁltering algorithms often maintain
+an internal state in order to be more eﬂicient than their decomposition. This
+reversible state is also a frequent source of bugs. CPChecker includes the trail-
+based operations when testing constraints such that any bug due to the state
+management of the constraint also has a high chance to be detected. CPChecker
+is generic and can be interfaced with any JVM trailed based solvers. CPChecker
+is able to generate detailed explanations by generating minimal domain exam-
+ples on which the user’s ﬁltering has failed, if any."
+"Related work In [5,6,7], the authors introduce tools to debug models. Some
+researches have also been done to help programmers while debugging codes for
+constraint programming  To the best of our knowledge, these tools, unlike
+CPChecker, do not focus on the ﬁltering properties of individual constraints.
+In the next sections, we ﬁrst detail how to test static ﬁltering algorithms
+before explaining the testing of stateful ﬁltering algorithms for trailed based
+solvers. Finally we introduce how CPChecker can be integrated into a test suite."
+Testing Static Filtering Algorithms
+
+"CPChecker is able to test any static ﬁltering algorithm acting over integer do-
+mains. Therefore, the user needs to implement a function taking some domains
+(array of set of ints) as input and returning the ﬁltered domains1:"
+"1 abstract Class Filter {
+2 def filter(variables: Array[Set[Int]]): Array[Set[Int]]
+
+3}"
+"CPChecker also needs a trusted ﬁltering algorithm serving as reference with
+the same signature. The least effort for a user is to implement a checker for
+the constraint under the form of a predicate that speciﬁes the semantic of the
+
+constraint. For instance a checker for the constraint  xi = 15 can be deﬁned
+l—I"
+as
+"def sumChecker (x:
+
+Array [ Int ]):
+
+Boolean
+
+X
+
+. sum
+
+H
+
+15"
+
+"One can create with CPChecker an Arc/ Bound-Z/ Bound-D/ Range Consis-
+tent ﬁltering algorithm by providing in argument to the corresponding construc-
+tor the implementation of the checker. For instance"
+"1 Class ArcFiltering(checker: Array[Int] => Boolean) extends
+Filter
+2 val trustedArcSumFiltering = new ArcFiltering(sumChecker)"
+"1 Most of the code fragments presented are in Scala for the sake of conciseness but
+the library is compatible with any JVM-based language."

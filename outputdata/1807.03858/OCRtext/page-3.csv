@@ -1,0 +1,75 @@
+"Here d(-,  is a function that measures the closeness of two policies (that will be chosen later in
+
+alignment with the choice of D.) We also note that the bound D7rref , 7r) depends on the choice of
+neighborhood size 6 but we omit a subscript for 6 for simplicity. We will require our discrepancy
+
+bound to vanish when M is an accurate model:
+
+ri=M*=>Dm<A7m> =0, 0‘”"
+V75 7rref
+(R2)
+"The third requirement for the discrepancy bound D is that it can be estimated and optimized in the
+
+Wat—"
+"Dm(ﬁ,w)isofthefonn IE [f(M\,7r,T)] (R3)
+
+T~7rref,M*
+where f is a known differentiable function. We can estimate such kind of discrepancy bounds for
+every 7r in the neighborhood of mef by sampling empirical trajectories 7(1), . . . ,7'("") once from
+
+executing policy mef on the real environment M * and compute the average of f (M, 7r, 7'“) ) ’s. Note
+that we insist the expectation cannot be over the randomness of trajectories from 7r on M *, because
+then we have to re-sample trajectories for every possible 7r encountered."
+(R3)
+"For example, one of the valid discrepancy bounds (under some assumptions) that we will prove in
+Section 4 is the error of the prediction of M on the trajectories from Wref:
+
+Dﬂmf(M, 71-) = L . 801...,StE7rreng""  —"
+(3.2)
+"Suppose we can establish such an discrepancy bound D (and the distance function d) with properties
+(R1), (R2), and (R3), — which will be the main focus of Section 4 —, then we can devise the
+following algorithmic framework as shown in Algorithm 1. We iteratively optimize the lower bound
+over the policy 7rk+1 and the model M H1, subject to the constraint that the policy is not very far
+from the reference policy 7rk obtained in the previous iteration. For simplicity, we only state the
+
+population version with the exact computation of D7rref , 7r)."
+"Algorithm 1 General Algorithmic Framework
+
+Inputs: Initial policy 7m. Discrepancy bound D and distance function d that satisfy equation (R1)
+and (R2).
+
+Fork=0toTz"
+",M
+7rk+1,Mk+1= argmax V7r —D7rk(M,7r)
+WEI-LMEM
+
+s.t. d(7r,7rk) S 6"
+(3.3)
+(3.4)
+
+"We remark that the discrepancy bound Dmc (M, 7r) in the objective plays the role of learning the
+dynamical model by ensuring the model to ﬁt to the existing trajectories. For example, using the
+discrepancy bound is the form of equation (3.2), we recover the standard objective for model learning.
+Jointly optimizing M and 7r encourages the algorithm to choose the most optimistic model that can
+ﬁt to the training data. The optimism compensates the conservatism in the lower bound and allows
+the algorithm to explore part of the space where the dynamical model are uncertainty with. Moreover,
+optimism-drive exploration can be more efﬁcient than the random exploration only options that may
+lead to good rewards under some feasible dynamics are explored. We show formally that the expected
+reward in the real environment is non-decreasing under the assumption that the real dynamics belongs
+to our parameterized family JVL6
+
+Theorem 3.1. Suppose that M * E M, that D and d satisfy equation (R1) and (R2), and the
+optimization problem in equation (3.3) is solvable at each iteration. Then, Algorithm I produces a
+sequence of policies 7r0, . . . ,7rT with monotonically increasing values:
+
+Vﬂ'o,M* < VW1,M* < . . . < VWT:M* 
+‘k — ‘k _ ' '
+Moreover, as k —> 00, the value Vmc’M converges to some V7""M , where 7r is a local maximum of
+* u -
+V7""M in domain H.
+
+6We note that such an assumption, though restricted, may not be very far from reality: optimistically speaking,
+we only need to approximate the dynamical model accurately on the trajectories of the optimal policy. This
+might be much easier than approximating the dynamical model globally."
+(3.5)
+

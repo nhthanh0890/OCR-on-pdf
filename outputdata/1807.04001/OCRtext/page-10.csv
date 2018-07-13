@@ -1,0 +1,101 @@
+Learning Neural Models for End-to—End Clustering
+11
+References
+"10.
+
+11.
+
+12.
+
+13.
+
+14.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+
+21.
+
+22.
+
+. Aljalbout, E., Golkov, V., Siddiqui, Y., Cremers, D.: Clustering with deep learning:
+
+Taxonomy and new methods. arXiv preprint arXiv:1801.07648 (2018)
+
+. Amodei, D., Ananthanarayanan, S., Anubhai, R., Bai, J ., Battenberg, E., Case, C.,
+
+Casper, J ., Catanzaro, B., Cheng, Q., Chen, G., et al.: Deep speech 2: End-to—end
+speech recognition in English and Mandarin. In: ICML. pp. 173—182 (2016)
+
+. Arias-Castro, E.: Clustering based on pairwise distances when the data is of mixed
+
+dimensions. IEEE Transactions on Information Theory pp. 1692—1706 (2011)
+Basu, S., Banerjee, A., Mooney, R.: Semi-supervised clustering by seeding. In:
+ICML. pp. 19—26 (2002)
+
+. Branson, S., Horn, G.V., Wah, C., Perona, P., Belongie, S.J.: The ignorant led by
+
+the blind: A hybrid human-machine vision system for ﬁne-grained categorization.
+IJCV pp. 3—29 (2014)
+
+. Chin, C.F., Shih, A.C.C., Fan, K.C.: A novel spectral clustering method based on
+
+pairwise distance matrix. J. Inf. Sci. Eng. pp. 649—658 (2010)
+Chopra, S., Hadsell, R., LeCun, Y.: Learning a similarity metric discriminatively,
+with application to face veriﬁcation. In: CVPR. pp. 539—546 vol. 1 (2005)
+
+. Ester, M., Kriegel, H.P., Sander, J., Xu, X.: A density-based algorithm for dis-
+
+covering clusters in large spatial databases with noise. In: KDD. pp. 226—231
+(1996)
+
+. Garofolo, J.S., Lamel, L.F., Fisher, W.M., Fiscus, J.G., Pallett, D.S., Dahlgren,
+
+N.L.: DARPA TIMIT acoustic phonetic continuous speech corpus CDROM (1993)
+Greff, K., van Steenkiste, S., Schmidhuber, J .: Neural expectation maximization.
+In: NIPS. pp. 6694—6704 (2017)
+
+He, K., Zhang, X., Ben, S., Sun, J .: Deep residual learning for image recognition.
+In: CVPR. pp. 770—778 (2016)
+
+Hoffer, E., Ailon, N.: Deep metric learning using triplet network. In: International
+Workshop on Similarity-Based Pattern Recognition. pp. 84—92 (2015)
+
+Hsu, Y., Lv, Z., Kira, Z.: Learning to cluster in order to transfer across domains
+and tasks. In: ICLR (2018), [accepted]
+
+J in, X., Han, J .: Expectation maximization clustering. In: Encyclopedia of Machine
+Learning, pp. 382—383. Springer (2011)
+
+Kampffmeyer, M., Lokse, S., Bianchi, F.M., Livi, L., Salberg, A.B., Robert, J.:
+Deep divergence-based clustering. In: IEEE Int’l Workshop on Machine Learning
+for Signal Processing (MLSP) (2017)
+
+Kaufman, L., Rousseeuw, P.J.: Finding Groups in Data: an Introduction to Cluster
+Analysis. John Wiley & Sons (1990)
+
+Krause, J ., Stark, M., Deng, J ., Li, F.F.: 3D object representations for ﬁne-grained
+categorization. In: Workshop on 3D Representation and Recognition at ICCV (2013)
+Le, Q.V., Ranzato, M., Monga, R., Devin, M., Corrado, G., Chen, K., Dean, J.,
+Ng, A.Y.: Building high-level features using large scale unsupervised learning. In:
+ICML. pp. 8595—8598 (2012)
+
+LeCun, Y., Bottou, L., Bengio, Y., Haffner, P.: Gradient-based learning applied to
+document recognition. Proceedings of the IEEE pp. 2278—2324 (1998)
+
+Lee, H., Ge, R., Ma, T., Risteski, A., Arora, S.: On the ability of neural nets to
+express distributions. In: COLT. pp. 1271—1296 (2017)
+
+Levine, S., Finn, C., Darrell, T., Abbeel, P.: End-to-end training of deep visuomotor
+policies. JMLR 17(1), 1334—1373 (2016)
+
+Liu, D., Kubala, F.: Online speaker clustering. In: ICASSP. pp. I—333—6 vol.1 (2003)"

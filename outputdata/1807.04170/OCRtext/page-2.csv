@@ -1,0 +1,45 @@
+"This section goes back over the concepts of fuzzy nominal scale and metrical scale
+presented in [Benoit and Foulloy 2013] that are used to represent postures. A
+fuzzy nominal scale is deﬁned as the link between a quantity manifestation and its
+representation by a fuzzy subset of linguistic terms also called Lexical Fuzzy Sub-
+set and denoted LFS in this paper. It gives a formal framework to the fuzzy map-
+ping process presented in [Mauris et al. 1994; Benoit and Foulloy 2002]. Its has
+been already shown that the fuzzy nominal scales map an equality relation on lex-
+ical term to a fuzzy similarity on LFSs. In [De Baets and Mesiar 2002], De Baets
+and Mesiar presented multiple possible fuzzy relations that can be used to extend
+the concept of fuzzy nominal scales. We especially point out the introduction of a
+new distance between LFSs in [Allevard et al. 2007]. This distance, called trans-
+portation distance and inspired by the Earth Mover Distance in [Rubner et al.
+2000], is linked with an arbitrary predefined distance between lexical terms and
+extends it by the way of a metrical scale as presented in [Benoit and Foulloy
+2013].
+
+Let ds be an arbitrary defined distance between lexical terms. This distance re-
+ﬂect a knowledge related to the semantic of the lexical terms. It can be experimen-
+tally deﬁned using a calibration process. Another way is to use this distance to
+include an knowledge on the relation between lexical terms. For example, the dis-
+tance between two terms representing similar entities is arbitrarily defined as
+small. The transportation distance d's between LFSs is then deduced from ds such
+that the coincidence on singletons is respected.
+
+Working with a metrical scale gives much more possibilities than working with
+a nominal scale even if this one is a fuzzy nominal scale. Indeed the fuzzy nominal
+scale preserves only the similarity during the measurement: if 2 entities are similar
+then their representations (as LFSs) throw a fuzzy nominal scale are similar. A
+metrical scale preserves also the comparisons of distances between entities. This
+means that the distance comparison can be used on the set of LFSs.
+
+In this paper, we propose to transpose the concept of tolerance interval to the
+set of LFSs. The chosen solution to implement this is to create a tolerance vol-
+umes deﬁned with the transportation distance.
+
+Fuzzy scale provides a tool to represent a posture with an LFS, but gives no
+semantic to the membership degree of each term to this fuzzy subset. In this study,
+we decided to choose a weak semantic by the interpretation of the fuzzy member-
+ship degrees as belief masses as defined in the TBM (Transferable Belief Model)
+[Smets 2000]. According to this semantic, each LFS is termed as Basic Belief As-
+signment i.e. the membership degree of a LFS is interpreted as a unitary mass dis-
+tributed on the singletons."
+2.2 Human posture representation
+"There has been a lot of focus on the development of natural interfaces using hu-
+man communication modalities in the human system interaction ﬁeld. One of"

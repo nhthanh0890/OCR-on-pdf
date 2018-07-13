@@ -1,0 +1,54 @@
+"we have that the X2-divergence between the states can be bounded by the X2-divergence between the
+actions in the sense that:"
+"(PI,P)1/2 S E
+SNp'Kref
+
+[X2(7F(‘|S)a 7rred-ISM"
+(B-l)
+
+(3-2)
+"A
+
+Therefore we obtain that 61 S (1 — 106, 62 S (1 — 706. Let f(s) = GW’M(s). We can control the
+difference between (pm'f, f) and (p”, f) by"
+
+(B3)
+"g (1 _ W1 (61(C—JPG’M, f2>1/2 + alaéﬂufuoo)
+(B-4)"
+"= (1 — 7)-1 (6152 + (slag/25m)
+S 652 + (1 — 'y)_1/2616;/25max"
+(B5)
+(3-6)
+It follows that
+"V”? — V”’M S 7(1 - 7)‘1 SE [G””‘7 (3)] ‘ (by Lemma 4.3)
+Np""
+g 7(1 — 7V1 ( IE [G”’M(S)] ‘ + ]E [G”’M(S) — IE [G”’M(S)H 
+SNP'In-ef SNP'Irmf SNP.""
+S 7(1 — 70—1 SNIE‘Nref ‘ + 7(1 _ 7) 1652 + 7(1 _ 7)—3/26 (Si/25m“"
+(by Lemma 4.3)
+
+"Proof of Proposition 4.1 and 4.2 . By deﬁnition of G and the Lipschitzness of VET”: we have that
+|G”’M(s, a)| S L|M(s, a) — M*(s, a)  Then, by Lemma 4.3 and triangle inequality, we have that"
+
+(B-7)
+"Thus we proved Proposition 4.1. Note that for any distribution p and p’ and function f, we have
+Es~pf(3) = Esw f(3) + (p — p’, f) S ES~p’ f(3) + llp — p’lllllflloo- Thus applying this
+inequality with f(5') = EANWHS) [||M(S, A) — M*(S,  , we obtain that"
+"1E” [||M‘(S,A) —M*(S,A)||] g E"" [||1T4‘(S,A) —M*(S,A)||]
+S~p SNP ref
+A~7r(-|S) A~7r(-|S)"
+"+||p”""f—p||1msax E [IIM‘(S,A)—M*(S,A)II]
+A~7r(-|S)"
+"B
+* s A)||] + 26K
+ASm—M(,
+E “M ,
+S SNPWref l:
+
+A~7r(-|S)"
+(3-8)
+"where the last inequality uses the inequalities (see Corollary D.7) that p7r — p”wf||1 <
+
+l—ZWJESNPW [KL(7F(S),7Fref(S))1/2|S] = 6n and that “MES, A) — M*(S, 3 2B. Com-
+bining (B.8) and (B .7) we complete the proof of Proposition 4.2. CI"
+14

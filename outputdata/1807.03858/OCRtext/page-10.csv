@@ -1,0 +1,47 @@
+"[16] Gabriel Kalweit and J oschka Boedecker. Uncertainty-driven imagination for continuous deep
+reinforcement learning. In Conference on Robot learning, pages 195—206, 2017."
+"[17] S Mohammad Khansari—Zadeh and Aude Billard. Learning stable nonlinear dynamical systems
+with gaussian mixture models. IEEE Transactions on Robotics, 27(5):943—957, 2011."
+"[18] Diederik P Kingma and Max Welling. Auto-encoding variational bayes. arXiv preprint
+arXiv:1312.6114, 2013."
+"[19] Jonathan Ko and Dieter Fox. Gp—bayesﬁlters: Bayesian ﬁltering using gaussian process
+prediction and observation models. Autonomous Robots, 27(1):75—90, 2009."
+"[20] Thanard Kurutach, Ignasi Clavera, Yan Duan, AViV Tamar, and Pieter Abbeel. Model-ensemble
+trust-region policy optimization. arXiv preprint arXiv:1802.10592, 2018."
+"[21] Sergey Levine and Pieter Abbeel. Learning neural network policies with guided policy search
+under unknown dynamics. In Advances in Neural Information Processing Systems, pages
+1071—1079, 2014."
+"[22] Sergey Levine, Chelsea Finn, Trevor Darrell, and Pieter Abbeel. End-to-end training of deep
+Visuomotor policies. The Journal of Machine Learning Research, 17(1): 1334—1373, 2016."
+"[23] Sergey Levine and Vladlen Koltun. Guided policy search. In International Conference on
+Machine Learning, pages 1—9, 2013."
+"[24] Timothy P Lillicrap, Jonathan J Hunt, Alexander Pritzel, Nicolas Heess, Torn Erez, Yuval Tassa,
+David Silver, and Daan Wierstra. Continuous control with deep reinforcement learning. arXiv
+preprint arXiv:1509.0297] , 2015."
+"[25] Rudolf Lioutikov, Alexandros Paraschos, Jan Peters, and Gerhard NeuInann. Sample-based
+infonnationl-theoretic stochastic optimal control. In Robotics and Automation (ICRA), 2014
+IEEE International Conference on, pages 3896—3902. IEEE, 2014."
+"[26] Volodyrnyr Mnih, Koray Kavukcuoglu, David Silver, Andrei A Rusu, Joel Veness, Marc G
+Bellernare, Alex Graves, Martin Riedmiller, Andreas K Fidjeland, Georg Ostrovski, et al.
+Human-level control through deep reinforcement learning. Nature, 518(7540):529, 2015."
+"[27] Jun Morimoto and Christopher G Atkeson. Minimax differential dynamic programming: An
+application to robust biped walking. In Advances in neural information processing systems,
+pages 1563—1570, 2003."
+"[28] Anusha Nagabandi, Gregory Kahn, Ronald S Fearing, and Sergey Levine. Neural network
+dynamics for model-based deep reinforcement learning with model-free ﬁne-tuning. arXiv
+preprint arXiv:l 708. 02596, 2017."
+"[29] Frank Nielsen and Richard Nock. On the chi square and higher-order chi distances for approxi-
+mating f—divergences. IEEE Signal Processing Letters, 21(1):10—13, 2014."
+"[30] Vitchyr Pong, Shixiang Gu, Murtaza Dalal, and Sergey Levine. Temporal difference models:
+Model-free deep I] for model-based control. arXiv preprint arXiv:1802. 09081, 2018."
+"[31] Igal Sason and Sergio Verdﬁ. f -divergence inequalities. IEEE Transactions on Information
+Theory, 62(11):5973—6006, 2016."
+"[32] John Schulman, Sergey Levine, Pieter Abbeel, Michael Jordan, and Philipp Moritz. Trust region
+policy optimization. In International Conference on Machine Learning, pages 1889—1897,
+2015."
+"[33] John Schulrnan, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. High-
+dirnensional continuous control using generalized advantage estimation. arXiv preprint
+arXiv:1506.02438, 2015."
+"[34] John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, and Oleg Klimov. Proximal
+policy optimization algorithms. arXiv preprint arXiv:l 707. 06347, 2017."
+11

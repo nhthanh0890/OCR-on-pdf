@@ -1,0 +1,43 @@
+"3) Right upper limb modeling
+
+The posture is represented by the combination of an arm and a forearm posture
+and is also defined by words. Each word represents a human modal posture. Each
+modal posture of the right upper limb corresponds to a set of modal postures of
+each part of the limb.
+
+The lexical set of postures is defined by a list of modal postures LP.mgd (table 2).
+
+Using rules, each modal posture made by upper limb postures is deﬁned in the
+system. This learning step is based on the sub-posture entries: the arm and forearm
+values. Table 2 illustrates rules deﬁning modal postures from lexical subsets de-
+fined in (l) and (2).
+
+It is noted that the example in table 2 illustrates a 2D dimension case due to the
+
+2 linguistic variables (corresponding to the arm and forearm). It is possible to
+generate the principle to n dimensions."
+The linguistic set of modal postures is given in (3):
+"Lp_mada1:{ﬁ'0nt, outside, inside, down, up, rear, ﬁ'ony’olded, outsidefolded,
+insidefolded, downfolded, upfolded, rearfolded, ﬁ'onthmiddle, outsidehmid—
+
+dle, insidehmiddle, downhmiddle, uphmiddle, rearhmiddle, ﬁ'ontvmiddle,
+outsidevmiddle, insidevmiddle, downvmiddle, upvmiddle, rearvmiddle}"
+(3)
+"Table 2. Modal posture deﬁnition Iules
+
+u
+Emu-mm
+
+downfolded frontfolded upfolded outsidefolded rearfolded insidefolded
+downhmiddle fronthmiddle uphmiddle outsidehmiddle rearhmiddle insidehmiddle
+downvmiddle frontvmiddle upvmiddle outsidevmiddle insidevmiddle"
+"The set of all modal postures LP—mad can be directly the set of reference postures
+i.e. known postures to be detected. This particular situation is presented in [Perrin
+et al. 2015]. In this paper, reference postures are expressed from modal postures.
+This additional step allows for the application designer to distinguish modal pos-
+tures from reference postures. Therefore, modal posture definition rules (table 2)
+are fixed independently from reference postures. In the next sub-section, reference
+posture modeling is presented based on modal posture representation."
+2.3 Human reference posture representation
+"Reference postures are the postures to be detected and are known by the system
+during the learning process. This section presents their representation from modal"

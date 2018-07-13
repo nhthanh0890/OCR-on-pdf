@@ -1,0 +1,109 @@
+Learning Neural Models for End—to—End Clustering
+
+
+
+"i
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+5519
+
+E
+
+E
+
+ 
+
+ 
+
+ 
+
+(b)"
+
+
+
+0.17
+"u
+
+an
+
+0.4"
+0.27
+032'
+
+"Fig. 5: Clustering results for (a) 2D point data, (b) COIL—100 objects, and (c)
+faces from FaceScrub (for illustrative purposes). The color of points / colored
+borders of images depict true cluster membership."
+"Table 1: NMI E [0, 1] and MR 6 [0, 1] averaged over 300 evaluations of a trained
+network. We abbreviate our “learning to cluster” method as “L2G”.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+2D Points (self generated) TIMIT COIL-100
+
+MR NMI MR NMI MR NMI
+L2G (:our method) 0004 0.993 0.060 0.928 0.116 0.867
+L2G W Euclidean 0.177 0.730 0.093 0.883 0.123 0.884
+L2G W Mahalanobis 0.185 0.725 0.104 0.882 0.093 0.890
+L2C W Metric Learning 0165 0.740 0.101 0.880 0.100 0880
+Random Cluster assignment 0.485 0.232 0.435 0.346 0.435 0.346
+Baselines (related work) 113g;ngVRI/ﬁR—Zoblggmﬁfggggﬁ [24]: MR : 0 [42]: NMI : 0.985"
+"Hence, we assume, backed by the additional experiments to be found online, that
+our model works well also for other data types and datasets, given a suitable
+embedding network. Tab. 1 gives the numerical results for said datasets in the
+row called “L20” without using the explicit metric learning block. Extensive
+preliminary experiments on other public datasets like e.g. FaceScrub [31] conﬁrm
+these results: learning to cluster reaches promising performance while not yet
+being on par with tailor—made state—of—the—art approaches.
+
+We compare the performance of our implicit distance metric learning method
+to versions enhanced by different explicit schemes for pairwise similarity com—
+putation prior to clustering. Speciﬁcally, three implementations of the optional
+metric learning block in subnetwork (b) are evaluated: using a ﬁxed diagonal
+matrix A (resembling the Euclidean distance), training a diagonal A (resembling
+Mahalanobis distance), and learning the entire coeﬁ'lcients of the distance matrix
+A. Since we argue above that our approach combines implicit deep metric em—
+bedding with clustering in an end—to—end architecture, one would not expect that
+adding explicit metric computation changes the results by a large extend. This
+assumption is largely conﬁrmed by the results in the “L2C+. . .” rows in Tab. 1:
+for COIL—100, Euclidean gives slightly worse, and the other two slightly better
+results than L20 alone; for TIMIT, all results are worse but still reasonable. We
+attribute the considerable performance drop on 2D points using all three explicit
+schemes to the fact that in this case much more instances are to be compared
+with each other (as each instance is smaller than e.g. an image, 72 is larger). This
+might have needed further adaptations like e.g. larger batch sizes (reduced here
+to N : 50 for computational reasons) and longer training times."

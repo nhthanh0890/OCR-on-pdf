@@ -1,0 +1,48 @@
+Meier, Elezi, Amirian, Dﬁrr & Stadelmann
+10
+Discussion and conclusions
+
+"We have presented a novel approach to learn neural models that directly output
+a probabilistic clustering on previously unseen groups of data; this includes a
+solution to the problem of outputting similar but unspeciﬁc “labels” for similar
+objects of unseen “classes”. A trained model is able to cluster different data types
+with promising results. This is a complete end-to-end approach to clustering that
+learns both the relevant features and the “algorithm” by which to produce the
+clustering itself. It outputs probabilities for cluster membership of all inputs as well
+as the number of clusters in test data. The learning phase only requires pairwise
+labels between examples from a separate training set, and no explicit similarity
+measure needs to be provided. This is especially useful for high-dimensional,
+perceptual data like images and audio, where similarity is usually semantically
+deﬁned by humans. Our experiments conﬁrm that our algorithm is able to
+implicitly learn a metric and directly use it for the included clustering. This is
+similar in spirit to the very recent work of Hsu et al. [13], but does not need and
+optimization on the test (clustering) set and ﬁnds k autonomously. It is a novel
+approach to leam to cluster, introducing a novel architecture and loss design.
+
+We observe that the clustering accuracy depends on the availability of a
+large number of different classes during training. We attribute this to the fact
+that the network needs to learn intra—class distances, a task inherently more
+difﬁcult than just to distinguish between objects of a ﬁxed amount of classes
+like in classiﬁcation problems. We understand the presented work as an early
+investigation into the new paradigm of learning to cluster by perceptual similarity
+speciﬁed through examples. It is inspired by our work on speaker clustering
+with deep neural networks, where we increasingly observe the need to go beyond
+surrogate tasks for learning, training end-to-end speciﬁcally for clustering to
+close a performance leak. While this works satisfactory for initial results, points
+for improvement revolve around scaling the approach to practical applicability,
+which foremost means to get rid of the dependency on n for the partition size.
+
+The number n of input examples to assess simultaneously is very relevant
+in practice: if an input data set has thousands of examples, incoherent single
+clusterings of subsets of n points would be required to be merged to produce a
+clustering of the whole dataset based on our model. As the (RBD)LSTM layers
+responsible for assessing points simultaneously in principle have a long, but still
+local (short-term) horizon, they are not apt to grasp similarities of thousands
+of objects. Several ideas exist to change the architecture, including to replace
+recurrent layers with temporal convolutions, or using our approach to seed some
+sort of differentiable K—means or EM layer on top of it. Preliminary results on
+this exist. Increasing n is a prerequisite to also increase the maximum number of
+clusters k, as k < n. For practical applicability, k needs to be increased by an
+order of magnitude; we plan to do this in the future. This might open up novel
+applications of our model in the area of transfer learning and domain adaptation."
+Acknowledgements: We thank the anonymous reviewers for helpful feedback.

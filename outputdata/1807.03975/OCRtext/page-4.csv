@@ -1,0 +1,20 @@
+Testing Global Constraints
+
+Dives
+3.1
+"A dive is performed by successively interleaving a push of the state and a domain
+restriction operation. When a leaf is reached (no or one solution remaining) the
+dive is ﬁnished and a random number of states are popped to start a new dive
+as detailed in the algorithm 1."
+"Algorithm 1: Algorithm performing dives
+Dives (root, trail, anives)
+dives (— 0
+currentDomains (— root
+while dives < anives do
+while lcurrentDomains.isLeaf do
+trail.push(currentDomains)
+restriction (— new RandomRestrictDomain(currentDomains)
+currentDomains (— branchAndFilter(currentDomains, restriction)
+dives (— dives + 1
+for 1' <— 1 to Random(1,tmil.size-1) do
+|_ trail.pop()"

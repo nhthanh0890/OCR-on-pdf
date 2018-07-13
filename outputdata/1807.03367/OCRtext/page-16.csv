@@ -1,0 +1,31 @@
+"Bar \' Restauran'
+bar pywﬁﬁmwau?
+phantasmagnrical
+
+1‘5""] gracerﬁ-Uegetaﬁlé"
+
+
+
+
+
+"Figure 3: Result of running the text recognizer of [20] on four examples of the Hell’s Kitchen
+neighborhood. Top row: two positive examples. Bottom row: example of false negative (left) and
+many false positives (right)"
+Landmark Classiﬁcation
+
+"While the guide has access to the landmark labels, the tourist needs to recognize these landmarks
+from raw perceptual information. In this section, we study landmark classiﬁcation as a supervised
+learning problem to investigate the difﬁculty of perceptual grounding in Talk The Walk."
+"The Talk The Walk dataset contains a total of 307 different landmarks divided among nine classes,
+see Figure 4 for how they are distributed. The class distribution is fairly imbalanced, with shops
+and restaurants as the most frequent landmarks and relatively few play ﬁelds and theaters. We treat
+landmark recognition as a multi-label classiﬁcation problem as there can be multiple landmarks on a
+
+comer5 ."
+"For the task of landmark classiﬁcation, we extract the relevant views of the 360 image from which
+a landmark is visible. Because landmarks are labeled to be on a speciﬁc comer of an intersection,
+we assume that they are visible from one of the orientations facing away from the intersection. For
+example, for a landmark on the northwest comer of an intersection, we extract views from both"
+"5Strictly speaking, this is more general than a multi-label setup because a comer might contain multiple
+landmarks of the same class."
+17

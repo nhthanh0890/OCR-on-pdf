@@ -1,0 +1,50 @@
+"A compelling empirical open question is whether pure model-based RL can achieve near-optimal re-
+ward on other more complicated muj uco tasks or real-world robotic tasks. We believe that understand-
+ing the trade-off between optimism and robustness is essential for designing more sample-efﬁcient
+algorithms. In our theory, we assume that the parameterized model class contains the true dynamical
+model. Removing this assumption is also another interesting open question."
+Acknowledgments:
+"We’d like to thank Emma Brunskill, Chelsea Finn, Haoran Tang and Yuping Luo for many helpful
+comments."
+References
+"[1] Yasin Abbasi-Yadkori and Csaba Szepesvari. Regret bounds for the adaptive control of linear
+
+quadratic systems. In Proceedings of the 24th Annual Conference on Learning Theory, pages
+1—26, 201 1."
+"[2] Pieter Abbeel, Morgan Quigley, and Andrew Y Ng. Using inaccurate models in reinforcement
+learning. In Proceedings of the 23rd international conference on Machine learning, pages 1—8.
+ACM, 2006."
+"[3] Joshua Achiam, David Held, AViV Tamar, and Pieter Abbeel. Constrained policy optimization.
+arXiv preprint arXiv:l 705.10528, 2017."
+"[4] Ross Boczar, Nikolai Matni, and Benjamin Recht. Finite-data performance guarantees for the
+output-feedback control of an unknown system. arXiv preprint arXiv:1803.09186, 2018."
+"[5] Thomas M Cover and Joy A Thomas. Elements of information theory. John Wiley & Sons,
+2012."
+"[6] Sarah Dean, Horia Mania, Nikolai Matni, Benjamin Recht, and Stephen Tu. On the sample
+complexity of the linear quadratic regulator. arXiv preprint arXiv:l 710. 01 688, 2017."
+"[7] Sarah Dean, Horia Mania, Nikolai Matni, Benjamin Recht, and Stephen Tu. Regret bounds
+
+for robust adaptive control of the linear quadratic regulator. arXiv preprint arXiv:1805. 09388,
+201 8."
+"[8] Marc Deisenroth and Carl E Rasmussen. Pilco: A model-based and data-efﬁcient approach
+
+to policy search. In Proceedings of the 28th International Conference on machine learning
+(ICML—ll), pages 465—472, 2011."
+"[9] Marc Peter Deisenroth, Gerhard Neumann, Jan Peters, et al. A survey on policy search for
+robotics. Foundations and Trends® in Robotics, 2(1—2): 1—142, 2013."
+"[10] Marc Peter Deisenroth, Carl Edward Rasmussen, and Dieter Fox. Learning to control a low-cost
+manipulator using data-efﬁcient reinforcement learning. 2011."
+"[11] Yan Duan, Xi Chen, Rein Houthooft, John Schulman, and Pieter Abbeel. Benchmarking
+deep reinforcement learning for continuous control. In International Conference on Machine
+Learning, pages 1329—1338, 2016."
+"[12] Vladimir Feinberg, Alvin Wan, Ion Stoica, Michael I Jordan, Joseph E Gonzalez, and Sergey
+Levine. Model-based value estimation for efﬁcient model-free reinforcement learning. arXiv
+preprint arXiv:1803.0010] , 2018."
+"[13] Shixiang Gu, Timothy Lillicrap, Ilya Sutskever, and Sergey Levine. Continuous deep q-learning
+with model-based acceleration. In International Conference on Machine Learning, pages
+2829—2838, 2016."
+"[14] K J etal Hunt, D Sbarbaro, R Zbikowski, and Peter J Gawthrop. Neural networks for control
+systems—a survey. Automatica, 28(6): 1083—1 1 12, 1992."
+"[15] Sham Kakade and John Langford. Approximately optimal approximate reinforcement learning.
+In ICML, volume 2, pages 267—274, 2002."
+10

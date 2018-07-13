@@ -1,0 +1,38 @@
+"Algorithm 1 Performance evaluation of location prediction model on full Talk The Walk setup
+procedure EVALUATE(tourist, guide, T, mtgt, ytgt, maxsteps)
+
+mHandimwsxrandmw,»
+features, actions (— array(), array()
+features [0] (— features at location (X, y)
+
+action (— uniform sample from action set
+
+1:, y (— update location given action
+
+features [t + 1] (— features at location (X, y)
+
+actions [t] (— action"
+l> initialize with random location
+l> create T—sized feature buffer
+"fori = 0;i < maxsteps; i + + do
+M (— tourist(features, actions)
+p($,yl') <— guide(M)
+mpreda ypred (— Sa—Inple frompcca 
+
+if mpreda ypred == mtgta ytgt then
+if locations[0] == mtgt, ytgt then
+return True
+else
+
+numevaluations (— nuInevaluations — 1
+if numevaluations S 0 then
+return False
+features (— features[1 :]
+actions (— actions[1 :]"
+l> target predicted
+"1:, y (— update location given action
+
+features [t + 1] (— features at location (X, y)
+actions [t] (— action"
+l> take new action
+16

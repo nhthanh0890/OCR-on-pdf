@@ -1,0 +1,89 @@
+Learning Neural Models for End—to—End Clustering
+
+"P(k:1):0.20
+
+§
+- P 0. 0
+W333“ —> o
+.
+. .
+
+P(k:3):0‘05
+A
+A
+_‘
+
+ 
+
+ 
+
+ 
+
+ 
+
+P(k:1):0‘05 P(k:2):0‘15 P(k:3):0‘80
+‘. . g A A ‘AA. 0 o o
+A Fromm-I
+
+A. —> W —> .. 0 AA A
+l A —
+
+switch to a disjunct set 0! classes
+
+ 
+
+ 
+
+ 
+
++ P(k:1):DA10 P(k:2):DA80 P(k:3):0‘10
+o o .0
+
+I I. .II o o _—
+OI—VPTm'TH o l 9'
+
+ 
+
+ 
+
+ 
+
+ 
+
+'o' “LE1"
+Training
+
+Testing
+"Fig. 2: Training vs. testing: cluster types encountered during application / inference
+are never seen in training. Exemplary outputs (right—hand side) contain a partition
+for each k (1—3 here) and a corresponding probability (best highlighted blue)."
+"compared to creating K—means, DBSCAN etc. in the ﬁrst place: it creates a
+speciﬁc clustering model, applicable to data with certain similarity structure,
+and once created / trained, the model performs “unsupervised learning” in the
+sense of ﬁnding groups. Finally, our approach differs from traditional cluster
+analysis [16] in how the clustering algorithm is applied: instead of looking for
+patterns in the data in an unbiased and exploratory way, as is typically the case
+in unsupervised learning, our approach is geared towards the use case where
+users know perceptually what they are looking for, and can make this explicit
+using examples. We then learn appropriate features and the similarity function
+simultaneously, taking full advantage of end—to—end learning.
+
+Our main contribution in this paper is the creation of a neural network
+architecture that learns to group data, i.e., that outputs the same “label” for
+“similar” objects regardless of (a) it has ever seen this group before; (b) regardless
+of the actual value of the label (it is hence not a “class”); and (c) regardless of
+the number of groups it will encounter during a single application run, up to a
+predeﬁned maximum. This is novel in its concept and generality (i.e., learn to
+cluster previously unseen groups end—to—end for arbitrary, high—dimensional input
+without any optimization on test data). Due to this novelty in approach, we
+focus here on the general idea and experimental demonstration of the principal
+workings, and leave comprehensive hyperparameter studies and optimizations
+for future work. In Sec. 2, we compare our approach to related work, before
+presenting the model and training procedure in detail in Sec. 3. We evaluate our
+approach on different datasets in Sec 4, showing promising performance and a
+high degree of generality for data types ranging from 2D points to audio snippets
+and images, and discuss these results with conclusions for future work in Sec. 5."
+Related Work
+
+"Learning to cluster based on neural networks has been approached mostly as
+a supervised learning problem to extract embeddings for a subsequent off—line"

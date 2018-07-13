@@ -1,0 +1,26 @@
+"[35] David Silver, Julian Schrittwieser, Karen Simonyan, Ioannis Antonoglou, Aj a Huang, Arthur
+Guez, Thomas Hubert, Lucas Baker, Matthew Lai, Adrian Bolton, et al. Mastering the game of
+go Without human knowledge. Nature, 550(7676):354, 2017."
+"[36] Max Simchowitz, Horia Mania, Stephen Tu, Michael I Jordan, and Benjamin Recht. Learning
+
+without mixing: Towards a sharp analysis of linear system identiﬁcation. arXiv preprint
+arXiv:1802.08334, 2018."
+"[37] Richard S Sutton. Integrated architectures for learning, planning, and reacting based on
+approximating dynamic programming. In Machine Learning Proceedings 1 990, pages 216—224.
+ElseVier, 1990."
+"[38] Richard S Sutton. Dyna, an integrated architecture for learning, planning, and reacting. ACM
+SIGARTBulletin, 2(4):160—163, 1991."
+"[39] Richard S Sutton, Csaba Szepesvari, Alborz Gerarnifard, and Michael P Bowling. Dyna-
+style planning with linear function approximation and prioritized sweeping. arXiv preprint
+arXiv:1206.3285, 2012."
+"[40] Aviv Tamar, Dotan Di Castro, and Ron Meir. Integrating a partial model into model free
+reinforcement learning. Journal of Machine Learning Research, 13(Jun):1927—1966, 2012."
+"[41] Voot Tangkaratt, Syogo Mori, Tingting Zhao, Jun MoriInoto, and Masashi Sugiyama. Model-
+based policy gradients with parameter-based exploration by least-squares conditional density
+estimation. Neural networks, 57:128—140, 2014."
+"[42] Emanuel Todorov, Tom Erez, and Yuval Tassa. Mujoco: A physics engine for model-based
+control. In Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on,
+pages 5026—5033. IEEE, 2012."
+"[43] Michael C Yip and David B Camarillo. Model-less feedback control of continuum manipulators
+in constrained environments. IEEE Transactions on Robotics, 30(4):880—889, 2014."
+12

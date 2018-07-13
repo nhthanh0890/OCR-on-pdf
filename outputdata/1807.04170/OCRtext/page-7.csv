@@ -1,0 +1,47 @@
+3 Decision process under user constraints
+"In our application context, the decision process has to choose an action from a
+human posture recognition result, which is expressed using fuzzy representation.
+This allows us to express the detection finely: several postures can be detected
+from one human posture. At the end of the configuration process, posture
+knowledge is made up of a lexical set, and a set of reference postures. Each refer-
+ence posture is defined by a fuzzy subset interpreted as a mass distribution on the
+lexical set [Benoit et al. 2015; Allevard et al. 2005]. A measurement result is also
+defined as represented by a fuzzy subset interpreted as another mass distribution
+on the same lexical set. The decision process then acts as a defuzzification.
+
+This ﬂuency of information carried by fuzzy representation is conventionally
+employed cases using multi-sensor detection. In this paper, we focus on its inter-
+ests in order to automatize the choice of action to be done from one human posture
+recognition. The imprecision carries information that represents possible confu-
+sion, hesitation or belief of detected postures. The output of the decision process
+stems from the defuzziﬁcation process.
+
+Several reference postures are detected from one human posture detection. In
+this experiment context, we consider that each reference posture corresponds to an
+action to be executed by the NAG robot. For each reference posture LP_refi is a
+corresponding action named A.
+
+In our first basic approach, the decision is given by the closest reference pos-
+ture obtained by the computation of the transportation distance on the LFS space,
+as presented in section II.A., between the measured posture Pdem and the refer-
+ence postures. This is the case in case 1 (fig. 4) where the decision result is a non-
+empty set of reference postures.
+
+Our second approach considers the uncertainty of the measurement process
+predominantly coming from camera process detection. The uncertainty estimation
+is complex in this case and is not presented in this paper. In all cases, epistemic
+uncertainty, i.e. relative to posture deﬁnition, is more important and taken into
+account by the consumer. We consider that the consumer accepts a tolerance vol-
+ume around each reference posture on the LFS space, as illustrated in ﬁg. 4. This
+tolerance volume plays the same role for the LFS space as the tolerance interval
+for numerical spaces. It is defined by the distance between a measured posture and
+the reference posture, which is recognized for having the measured posture inside
+its tolerance volume. In case 2 presented in ﬁg. 4, the measured posture is outside
+the tolerance volumes of all reference postures and the decision result is an empty
+set. In case 3 the tolerance volume around Prefj is large enough to include the
+measured posture. In this approach the tolerance volumes do not overlap, so the
+decision result is an empty set or a singleton.
+
+In our third approach, the consumer wants to take into account the possible
+confusion between several possible postures, which is given by the overlapping of
+their respective tolerance volume that depends on the distance between the refer-"

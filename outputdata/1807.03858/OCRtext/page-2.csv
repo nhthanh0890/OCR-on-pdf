@@ -1,0 +1,78 @@
+"local optimum of expected reward, assuming the partial derivative of learned model is in the vicinity
+of the true models since optimization starts, which could be hard to satisfy. The work of Feinberg
+et a1. [12] bounds the value discrepancy between the real and estimated models by £3 error of the
+trajectories and use it to improve the value estimation in model-free RL. Our discrepancy bounds,
+in contrast, depend on the expected error of the model in one step and can be invariant to the state
+representation. Moreover, our algorithms enjoy convergence guarantees in the sense that the value
+under the unknown true dynamics is non-decreasing."
+
+Notations and Preliminaries
+"We mostly work with continuous state and action space, although most of the results can be extended
+to discrete action space as well. We denote the state space by S C Rd, the action space by A C RI.
+A policy 7r(-  speciﬁes the conditional distribution over the action space given a state. A dynamical
+model M  |S, A) speciﬁes the conditional distribution of the next state given the current state S and
+action A. We will use M * globally to denote the unknown real dynamical model. Let M denote a
+
+(parameterized) family of models that we are interested in. We use H to denote the parameterized
+family of policies."
+"With slight abuse of the notation, we also use 7r and M the stochastic function deﬁned by 7r and M:
+by 7r(s) we mean the random variable with distribution 7r(-  Unless otherwise state, we will use
+
+capital letters and Greek letters for random variables. For random variable X, we will use p X to
+denote its density function."
+"Let 33””, . . . , Sf’M, . . . to denote the random variable of the states steps 0, . . . , when we execute
+policy 7r on dynamic model M. We will omit the subscript when it’s clear from the context. We use
+A0, . . . ,At, . . . for actions similarly. We often use 7' to denote the random variables for the trajectory
+
+(80, A1, . . . , St, At, . . .  Let *y be the discount factor and V7""M be the value function:"
+"V7r,M
+(3) =
+IE i
+’YtR
+(StaAt) I 50
+= s
+
+t> A 7r
+_0,
+Vt 1 t~ 
+ t t)) t
+S + NM 3 ,At
+_0"
+(2.1)
+"We deﬁne V7""M = E [V7r’M (30)] as the expected reward-to-go at step 0 and our goal is to maximize
+
+the cumulative rewards V”’M* . For simplicity, throughout the paper, we set n = 7(1 — 'y)_1 since it
+occurs frequently in our equations. Every policy 7r induces a distribution of states Visited by policy 7r,
+as formally deﬁned below.
+
+Deﬁnition 2.1. For a policy 7r, deﬁne pW’M as the discounted distribution of the states Visited by
+
+7r on M. Let p7r be a shorthand for pmlw and we omit the superscript M * throughout the paper.
+Concretely, let :05ng 50:3 be the distribution of S? | 36' = s and let p7r = (1 — *7) 22:0 'ytpsgr"
+"Given the purpose of the paper is to study model-based RL algorithms with sample efﬁciency, we
+
+assume that given an imaginary model M, we can optimize the imaginary reward (possibly with a
+large amount of imaginary rollouts.) Indeed, given sufﬁcient samples from the imaginary dynamical
+
+models, model-free algorithms such as policy gradient, TRPO [32], DDPG [24], PPO [34], etc., often
+perform very well."
+
+Algorithmic Framework
+"As alluded in the introduction, towards optimizing VW’IW , our plan is to build a lower bound for
+VW’M* of the following type and optimize it iteratively:"
+"7r,1/VI\ _ 
+V”’M* 2 V
+
+M,7r)"
+(3.1)
+"where DUTJ: 7r) 6 R20 bounds from above the discrepancy between V7“? and V”’M*. Building
+
+such an optimizable discrepancy bound globally that holds for all if and 7r turns out to be rather
+difﬁcult, if not impossible. Instead, we shoot for establishing such a bound over the neighborhood of
+a reference policy Wref."
+"V7r,M* A
+Z V7l',M _ A
+D7rref(M7 7T)?"
+V7r s.t. d(7l',7T1-ef) S 6
+(R1)
+

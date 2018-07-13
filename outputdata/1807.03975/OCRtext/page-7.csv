@@ -1,0 +1,84 @@
+Testing and debugging ﬁltering of global constraints
+
+References
+"11.
+12.
+
+13.
+
+14.
+
+15.
+
+16.
+17.
+
+18.
+
+. OscaR Team.
+
+. Micha Meier.
+
+. Charles Prud’homme, Jean-Guillaume Fages, and Xavier Lorca. Choco Documen-
+
+tation. TASC - LS2N CNRS UMR 6241, COSLING S.A.S., 2017.
+
+OscaR: Scala in OR, 2012. Available
+
+https : //bitbucket . org/oscarlib/oscar.
+
+. Krzysztof Kuchcinski, Radoslaw Szymanek and contributors. J acop solver. Avail-
+
+able from https : //osolpro . atlassian.net/wiki/spaces/JACOP/.
+Gecode Team. Gecode: Generic constraint development environment, 2006. Avail-
+
+able from http: //www . gecode . org.
+Debugging constraint programs. In International Conference on
+Principles and Practice of Constraint Programming, pages 204—221. Springer, 1995.
+
+. Peter J. Stuckey Carleton Coffrin, Siqi Liu and Guido Tack. Solution checking with
+
+minizinc. In ModeRef2017, The Sixteenth International Workshop on Constraint
+Modelling and Reformulation, 2017.
+
+Nadjib Lazaar, Arnaud Gotlieb, and Yahia Lebbah. A cp framework for testing
+cp. Constraints, 17(2):123—147, 2012.
+
+Frédéric Goualard and Frédéric Benhamou. Debugging Constraint Programs by
+Store Inspection, pages 273—297. Springer Berlin Heidelberg, Berlin, Heidelberg,
+2000.
+
+. ScalaCheck. http://scalacheck.org.
+10.
+
+Laurent Michel, Pierre Schaus, and Pascal Van Hentenryck. Minicp: A minimalist
+open-source solver to teach constraint programming. Technical Report, 2018.
+AssertJ Library. http : / / j oel-costigliola. github . io/ assert j / index .html.
+Philippe Baptiste, Claude Le Pape, and Wim Nuijten. Constraint-based schedul-
+ing: applying constraint programming to scheduling problems, volume 39. Springer
+Science, 201.
+
+Steven Gay, Renaud Hartert, and Pierre Schaus. Time-table disjunctive reason-
+ing for the cumulative constraint. In International Conference on AI and OR
+Techniques in Constriant Programming for Combinatorial Optimization Problems,
+pages 157—172. Springer, 2015.
+
+Cyrille Dejemeppe, Sascha Van Cauwelaert, and Pierre Schaus. The unary resource
+with transition times. In International conference on principles and practice of
+constraint programming, pages 89—104. Springer, 2015.
+
+Hamed Fahimi and Claude-Guy Quimper. Linear-time ﬁltering algorithms for the
+disjunctive constraint. In Proceedings of the Twenty-Eighth AAAI Conference on
+Artiﬁcial Intelligence, pages 2637—2643. AAAI Press, 2014.
+
+Petr Vili’m. Global constraints in scheduling. 2007.
+
+Petr Vili’m. Timetable edge ﬁnding ﬁltering algorithm for discrete cumulative
+resources. In International Conference on AI and OR Techniques in Constriant
+Programming for Combinatorial Optimization Problems, pages 230—245. Springer,
+2011.
+
+Alexander Tesch. A nearly exact propagation algorithm for energetic reasoning in
+o (n2logn). In International Conference on Principles and Practice of Constraint
+Programming, pages 493—519. Springer, 2016."
+from

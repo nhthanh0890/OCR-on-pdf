@@ -1,0 +1,47 @@
+
+"Talk the Walk: Navigating New York City through
+Grounded Dialogue"
+
+"Harm de VriesT, Kurt Shuster*, Dhruv Batra*, Devi Parikh*, Jason Weston* & Douwe Kiela*
+TMILA, Université de Montréal; *Facebook AI Research
+devriesQiro . umontreal . ca, {kshuster , dbatra, dparikh, jase ,dkiela}@fb . com"
+Abstract
+"We introduce “Talk The Walk”, the ﬁrst large-scale dialogue dataset grounded in
+action and perception. The task involves two agents (a “guide” and a “tourist”) that
+communicate via natural language in order to achieve a common goal: having the
+tourist navigate to a given target location. The task and dataset, which are described
+in detail, are challenging and their full solution is an open problem that we pose
+to the community. We (i) focus on the task of tourist localization and develop the
+novel Masked Attention for Spatial Convolutions (MASC) mechanism that allows
+for grounding tourist utterances into the guide’s map, (ii) show it yields signiﬁcant
+improvements for both emergent and natural language communication, and (iii)
+using this method, we establish non-trivial baselines on the full task."
+
+Introduction
+"As artiﬁcial intelligence plays an ever more prominent role in everyday human lives, it becomes
+increasingly important to enable machines to communicate via natural language—not only with
+humans, but also with each other. Learning algorithms for natural language understanding, such
+as in machine translation and reading comprehension, have progressed at an unprecedented rate in
+recent years, but still rely on static, large-scale, text-only datasets that lack crucial aspects of how
+humans understand and produce natural language. Namely, humans develop language capabilities by
+being embodied in an environment which they can perceive, manipulate and move around in; and by
+interacting with other humans. Hence, we argue that we should incorporate all three fundamental
+aspects of human language acquisition—perception, action and interactive communication—and
+develop a task and dataset to that effect."
+"We introduce the Talk the Walk dataset, where the aim is for two agents, a “guide” and a “tourist”, to
+interact with each other via natural language in order to achieve a common goal: having the tourist
+navigate towards the correct location. The guide has access to a map and knows the target location,
+but does not know where the tourist is; the tourist has a 360-degree view of the world, but knows
+neither the target location on the map nor the way to it. The agents need to work together through
+communication in order to successfully solve the task. An example of the task is given in Figure 1."
+"Grounded language learning has (re-) gained traction in the AI community, and much attention is
+currently devoted to virtual embodiment—the development of multi-agent communication tasks in
+Virtual environments—Which has been argued to be a Viable strategy for acquiring natural language
+semantics [29]. Various related tasks have recently been introduced, but in each case with some
+limitations. Although visually grounded dialogue tasks [15, 13] comprise perceptual grounding
+and multi-agent interaction, their agents are passive observers and do not act in the environment.
+By contrast, instruction-following tasks, such as VNL [2], involve action and perception but lack
+natural language interaction with other agents. Furthermore, some of these works use simulated
+environments [12] and/or templated language [26], which arguably oversimpliﬁes real perception or
+natural language, respectively. See Table l for a comparison."
+Preprint. Work in progress.

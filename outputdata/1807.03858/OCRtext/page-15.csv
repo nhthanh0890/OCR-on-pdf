@@ -1,0 +1,60 @@
+"Now we are ready to state the main result of this subsection.
+
+Lemma C.4. Let G, G”,P’,P, f as deﬁned in the beginning of this section. Let 61 = (1 —
+7)X2GM(P’, P)1/2 and 62 = (1 — 7)X%PGM(P', P)1/2. Then,
+
+(1 — 7) |<G*’M, f) — (Gm, f>| s 61llflloo (0.6)
+(1 — 7) Mam, f) — <c‘m, f>| : 51<GPGM f2>1/2 + alaé/ﬁlfuoo (c7)"
+(C.6)
+(0.7)
+"Proof. Recall by equation (C3), we have (CW — GM = (G’ACJM, f). By Lemma C.3,
+(G’AC—v’u, f >2 S X%M(P’, P)<C_1”PC7/~t, f)
+
+—I"
+(C.8)
+"Using equation (C.3) again, we have
+,—"
+"<G'Pc‘m, f2) = (GPG/J, f2) + 1L<GMPGM f2)
+A"
+(0.9)
+"By Lemma C.3 again, we have that
+(G’ACJPG, f2)2 3 X26196,“ (P’,P)(C_J’PC_JPG*M, f4) (0.10)
+By Holder inequality and the fact that ||C_1‘||1_)1 = 1, ||C_1”||1_)1 = 1 and ||P||1_)1 = 1, we have
+(G’PC—v’PC—v‘uj“) : IIGIPGPGMII1IIf4IIoo s Ilfllio (0.11)
+Then, combining equation (C8), (C9), (C.11), we have
+(1 —7)|<C7’A@u,f>l s 61<@'Péu, W”
+
+s mam/i, f2)1/2 + 61(C—J’AC—1PC—Ju, f2)1/2
+(by equation (C9) and AM-GM)"
+(0.10)
+(0.11)
+G)y equation (C8))
+s 51<GPGM W” + 6165/2llflloo
+"(by equation (C.10) and (C.11))
+El"
+"The following Lemma is a stronger extension of Lemma C.4, which can be used to future improve
+Proposition 4.6, and may be of other potential independent interests. We state it for completeness.
+Lemma C.5. Let G, G”, P’, P, f as deﬁned in the beginning of this section. Let dk = (GYPYCC—v’u
+and 6k = (1 — 7)X3k_1(P’,P)1/2, then we have thatfor any K,
+
+u—nkemn—«njnsnwnﬁrw+&%“%ajn*”+
+
++&uﬁnﬁﬂjﬂV%+&uﬁ?mmM"
+Proof. We ﬁrst use induction to prove that:
+"(C. 12)
+By Lemma C.4, we got the case for K = 1. Assuming we have prove the case for K, then applying
+
+(GIA(GP)KG/Ja f2K> = <GA(GP)KG/Ja f2K> + (1 — ’Y)_1<GA(GP)K+1G/Ja f2K>"
+"(C.13)
+S  f2K> + (1 _ 7)_1X3K (Pl, P)1/2<GIA(GP)K+1GM, f2K+1>1/2
+s <GA(GP)KG/Ja f2K> + 5K+1<C_1""A(C7P)K+1@M,f2K+1>1/2
+By Cauchy-Schwartz inequality, we obtain that
+<G'A(GP)K@u,f2"">2‘K s <GA(GP)KG/Ja VF"" + 5K+1<@’A(@P)K+1@M,f >
+
+Plugging the equation above into equation (C.12), we provide the induction hypothesis for the case
+with K + 1.
+
+2K+1 2—K—1"
+Now applying (GIA(GP)KG/J,, f2K)2_K S ||f||C>0 with equation (C.12) we complete the proof.
+
+16

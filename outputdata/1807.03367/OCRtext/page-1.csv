@@ -1,0 +1,57 @@
+
+
+"It is a Clbul g :IHup
+
+Should I go In punt"
+_,_
+
+
+"l Banl
+.‘Ilmnm"
+I Plagliclrl
+"hHmu
+65mm,"
+
+"Figure 1: Example of the Talk The Walk task: two agents, a “tourist” and a “guide”, interact with
+each other via natural language in order to have the tourist navigate towards the correct location. The
+guide has access to a map and knows the target location but not the tourist location, while the tourist
+does not know the way but can navigate in a 360-degree street view environment."
+"Talk The Walk is the ﬁrst task to bring all three aspects together: perception for the tourist observing
+the world, action for the tourist to navigate through the environment, and interactive dialogue for the
+tourist and guide to work towards their common goal. To collect grounded dialogues, we constructed
+a virtual environment by manually capturing 360 views of several neighborhoods in New York City
+
+(NYC)1. Our street view environment was integrated into ParlAI [38] and used to collect a large—scale
+dataset on Mechanical Turk involving human perception, action and communication."
+"We argue that for artiﬁcial agents to solve this challenging problem, some fundamental architecture
+designs are missing, and our hope is that this task motivates their innovation. To that end, we focus
+on the task of localization and develop the novel Masked Attention for Spatial Convolutions (MASC)
+mechanism. To model the interaction between language and action, this architecture repeatedly
+conditions the spatial dimensions of a convolution on the communicated message sequence."
+"This work makes the following contributions: 1) We present the ﬁrst large scale dialogue dataset
+grounded in action and perception; 2) We introduce the MASC architecture for localization and show
+it yields improvements for both emergent and natural language; 4) Using localization models, we
+establish initial baselines 0n the full task; 5) We show that our best model exceeds human performance
+
+under the assumption of “perfect perception” and with a learned emergent communication protocol,
+and sets a non-trivial baseline with natural language."
+
+Talk The Walk
+"We create a perceptual environment by manually capturing several neighborhoods of NeW York
+City (NYC) With a 360 cameraz. Most parts of the city are grid-like and uniform, Which makes it
+well-suited for obtaining a 2D grid. For Talk The Walk, we capture parts of Hell’s Kitchen, East
+Village, the Financial District, Williamsburg and the Upper East Side—see Figure 5 in Appendix G
+for their respective locations within NYC. For each neighborhood, we choose an approximately 5x5
+grid and capture a 360 View on all four comers of each intersection, leading to a grid-size of roughly
+10x10 per neighborhood."
+"The tourist’s location is given as a tuple (.75, y, 0), where x, y are the coordinates and 0 signiﬁes the
+orientation (north, east, south or west). The tourist can take three actions: turn left, turn right and
+go forward. For moving forward, we add (0, l), (l, 0), (0, —l), (—1, 0) to the x, y coordinates for
+the respective orientations. Upon a turning action, the orientation is updated by 0 = (0 + (1) mod 4
+where d = —1 for left and d = 1 for right. If the tourist moves outside the grid, we issue a warning
+that they cannot go in that direction and do not update the location. Moreover, tourists are shown
+different types of transitions: a short transition for actions that bring the tourist to a different corner
+of the same intersection; and a longer transition for actions that bring them to a new intersection."
+"lWe avoided using existing street View resources due to licensing issues.
+2A 360ﬂy 4K camera."
+

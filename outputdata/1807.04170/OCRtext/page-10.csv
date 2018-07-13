@@ -1,0 +1,41 @@
+"It would be worth studying the impact quality of the recognition process using
+modal information (i.e. posture) as reference. Indeed, on the one hand, not using
+additional reference representations simplifies the system but the learning step is
+dependent on the amount of known information (postures) to be detected. On the
+other hand, representing reference information (postures) to be detected facilitates
+adding new reference information. But ﬁxed modal postures have to be chosen in
+order for the system to be able to represent new references."
+References
+"[Allervard et al. 2005]
+Allevard T, Benoit E, Foulloy L (2005) Dynamic gesture recognition using signal processing based on
+fuuy nominal scales. In: Measurement, vol. 38, no. 4, pp. 303 -3 12"
+"[Allevard et a1. 2007]
+Allevard T, Benoit E, Foulloy L 2007) The transportation distance for fuzzy descriptions of measure-
+ment. In: Metrology and Meas. Syst., vol. XIV no. 1, pp. 25-37"
+"[Benoit and Foulloy 2002]
+Benoit E, Foulloy L (2002) Fuuy nominal scale. In: IMEKO TC7 Symposium, Cracow, Poland, pp.
+21—25."
+"[Benoit and Foulloy 2013]
+Benoit E, Foulloy L (2013) The role of fuuy scales in measurement theory. In: Measurement, vol. 46,
+no. 8, pp. 2921-2926."
+"[Benoit et a1. 2015]
+Benoit E, Penin S, Coquin D (2015) Body posture measurement in a context of example-based teach-
+ing. In: Journal of Physics: conference series, vol. 588, 012055, Madeira, Portugal"
+"[De Bacts and MesiaI 2002]
+De Bacts B, MesiaI R (2002) Metiics and T-equalitie. 1: Journal of Mathematical Analysis and Appli-
+cations, 267, pp. 531—547"
+"[Dubois and Prad 1988]
+Dubois D, Prade H (1988) Representation and combination of uncertainty with belief functions and
+possibility measures. In: Computational Intelligence, vol. 4, no. 3, pp. 244-264"
+"[Mamis et a1. 1994]
+Mamis G, Benoit E, Foulloy L (1994) Fuzzy symbolic sensors - from concept to applications. In:
+
+Measurement, vol. 12, pp. 357—384."
+"[Mina and AchaIya 2007]
+MilIa S., AchaIya T (2007) Gestuie Recognition: A Survey. In: IEEE Trans. Sys., Man, and Cybemet—
+ics, Par: C: Applications and Reviews, vol. 37, no. 3, May 2007, pp. 311-324"
+"[Perrin et a1. 2015]
+
+Perrin S, Benoit E, Coquin D (2015) Fusion method choice driven by user constraints in a human ge s-
+ture recognition context. In: Proc IEEE 8th International Conference on Human System Interactions
+HIS 2015, Warsaw, Poland, pp 316-321"

@@ -1,0 +1,32 @@
+"The strategies for the decision are as follows:
+E' The closest reference posture: this strategy is not recommended when the
+set of reference postures is small.
+E' Non overlapping tolerance volumes: we deﬁne a tolerance distance for
+each reference posture:
+dtolerancepamlmg = 0.07
+dtolerancesmndmg = 0.05
+dtolerancepmlecl = 0.5
+E' Possible overlapping tolerance volumes, and the protect posture is consi-
+dered as critical.
+dtolerancepamlmg = 0.10
+dtolerancesmndmg = 0.08
+dtolerancepmlecl = 1.0
+The P1 distances to the references are computed.
+’5(P1,Pp0m,mg) = 1.8475, d’S(P1,Psmdmg) = 1.9005, d'S(P1,Ppmlecl) = 0.584
+In this case, the final decision depends on the chosen strategy. The last one re-
+cognizes the protect posture even if the measured one is not so close. With the
+second strategy, no posture is recognized.
+
+MW"
+
+
+
+
+
+Fig. 6 3 reference postures: pointing, standing and protecting and the detected posture (stop)
+4 Perspectives
+"In the future our work will consider several posture recognition sensors and
+types of sensors. This will illustrate the interest of the multi-modal fusion ap-
+proach which will make it possible to manage conﬂicting infonnation. In addition,
+we will look into how to consider human gesture and its repetition from a tem-
+poral point of View, which will also allow us to study how fast it is done."

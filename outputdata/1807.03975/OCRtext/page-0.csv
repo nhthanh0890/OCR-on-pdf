@@ -1,0 +1,42 @@
+Testing Global Constraints
+Aurélie Massart, Valentin Rombouts, and Pierre Schaus
+UCLouvain/ICTEAM Belgium
+"Abstract. Every Constraint Programming (CP) solver exposes a library
+of constraints for solving combinatorial problems. In order to be useful,
+CP solvers need to be bug-free. Therefore the testing of the solver is
+crucial to make developers and users conﬁdent. We present a Java library
+allowing any JVM based solver to test that the implementations of the
+individual constraints are correct. The library can be used in a test suite
+executed in a continuous integration tool or it can also be used to discover
+minimalist instances violating some properties (arc-consistency, etc) in
+order to help the developer to identify the origin of the problem using
+standard debuggers."
+Keywords: Constraint Programming - Testing - Filtering
+Introduction
+
+"The ﬁltering algorithms inside constraint programming solvers ([1,2,3,4] etc.) are
+mainly tested using test suites implemented manually. Creating such unit tests
+is a signiﬁcant workload for the developers and is also error prone.
+
+The most elementary yet important test to achieve for a constraint is that
+no feasible solution is removed. One can always implement a checker verifying
+the feasibility of the constraint when all the variables are bound. By comparing
+the number of solutions generated with both the checker and the tested ﬁltering
+algorithm, one can be conﬁdent that no solution is removed. This procedure can
+be repeated for many (small) instances (possibly randomly generated). Alter-
+natively, one can compare with a decomposition of the constraint into (more)
+elementary ones. This latter approach can improve the coverage of the test suite.
+
+Those unit tests verifying the non removal of feasible solutions do not verify
+other properties of constraints generally more difﬁcult to test. For instance, the
+domain-consistency property is rarely tested outside some hard-coded small test
+examples.
+
+We introduce CPChecker as a tool to ease the solver developer’s life by
+automating the testing of properties of ﬁltering algorithms. For instance, algo-
+rithm A should ﬁlter more than algorithm B or Algorithm A should achieve arc
+or bound-consistency, etc. The tool does not ensure that the tested ﬁltering does
+not contain any bug - as it is impossible to test all possible input domains - but it
+can reveal the presence of one, if a test fails. The large variety of input domains
+pseudo-randomly generated should make the user conﬁdent that the tool would
+allow to detect most of the bugs."

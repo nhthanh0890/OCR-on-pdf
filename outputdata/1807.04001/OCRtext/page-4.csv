@@ -1,0 +1,110 @@
+Learning Neural Models for End—to—End Clustering
+
+"P(k
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+,_ C
+
+ 
+
+ 
+
+ 
+
+ 
+
+(d)
+
+ 
+
+ 
+
+wUHwHE
+
+ 
+
+ 
+
+ 
+
+ 
+
+waHwHESL
+
+J|>|>|T
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+waHw‘E/r
+
+ 
+
+ 
+
+035:»? 7??? ~525de"
+"Fig. 3: Our complete model, consisting of (a) the embedding network, (b) clus—
+tering network (including an optional metric learning part, see Sec. 3.3), (c)
+cluster—assignment network and (d) cluster—count estimating network."
+"two examples belong together. It uses as input 71 Z 2 examples xi, where 71
+may be different during training and application and constitutes the number of
+objects that can be clustered at a time, i.e. the maximum number of objects in a
+partition. The network’s output is two—fold: a probability distribution P(l€) over
+the cluster count 1 S k S kmax; and probability distributions P(~ | xi, k) over all
+possible cluster indexes for each input example mi and for each k."
+Network architecture
+3.1
+"The network architecture (see Fig. 3) allows the ﬂexible use of different input types,
+e.g. images, audio or 2D points. An input as, is ﬁrst processed by an embedding
+network (a) that produces a lower—dimensional representation 2, =  The
+dimension of 2, may vary depending on the data type. For example, 2D points
+do not require any embedding network. A fully connected layer (FC) with
+LeakyReLU activation at the beginning of the clustering network (b) is then used
+to bring all embeddings to the same size. This approach allows to use the identical
+subnetworks (b)—(d) and only change the subnet (a) for any data type. The goal
+of the subnet (b) is to compare each input  with all other Z($j7$i), in order
+to learn an abstract grouping which is then concretized into an estimation of the
+number of clusters (subnet  and a cluster assignment (subnet 
+
+To be able to process a non—ﬁxed number of examples n as input, we use
+a recurrent neural network. Speciﬁcally, we use stacked residual bi—directional
+LSTM—layers (RBDLSTM), which are similar to the cells described in [39] and
+visualized in Fig. 4. The residual connections allow a much more effective gradient
+ﬂow during training [11] and avoid vanishing gradients. Additionally, the network
+can learn to use or bypass certain layers using the residual connections, thus
+reducing the architectural decision on the number of recurrent layers to the
+simpler one of ﬁnding a reasonable upper bound.
+
+The ﬁrst of overall two outputs is modeled by the cluster assignment network
+(c). It contains a softmax—layer to produce P(€ | m, k), which assigns a cluster
+index K to each input mi, given k clusters (i.e., we get a distribution over possible"

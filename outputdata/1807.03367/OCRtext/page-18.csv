@@ -1,0 +1,117 @@
+"To account for class imbalance, we train all described models With a binary cross entropy loss
+weighted by the inverted class frequency. We create a 80—20 class—conditional split of the dataset into
+
+a training and validation set. We train for 100 epochs and perform early stopping on the validation
+loss."
+"The F1 scores for the described methods in Table 10. We compare to an “all positive” baseline that
+always predicts that the landmark class is visible and observe that all presented models struggle to
+outperform this baseline. Although 256—dimensional ResNet features achieve slightly better precision
+on the validation set, it results in much worse recall and a lower Fl score. Our results indicate that
+perceptual grounding is a difﬁcult task, which easily merits a paper of its own right, and so we leave
+further improvements (e. g. better text recognizers) for future work."
+
+Dataset Details
+
+"a Rockeleller in}
+
+» gsquareo
+
+NIme .  g
+
+; @
+
+    
+        
+ 
+
+may“
+Sqw. Park Lung ‘"
+
+"Neighborhood #success #failed #disconnects
+
+ 
+
+Hell’s Kitchen 2075 762 867
+Williamsburg 2077 683 780
+East Village 2035 713 624
+Financial District 2042 607 497
+Upper East 2081 359 576
+
+ 
+
+Total 10310 3124 3344"
+"Figure 5: Map of New York City
+with red rectangles indicating the
+
+captured neighborhoods of the
+Talk The Walk dataset."
+"Table 11: Dataset statistics split by neighborhood and dia-
+logue status."
+"Dataset split We split the full dataset by assigning entire 4X4 grids (independent of the target
+location) to the train, valid or test set. Speciﬁcally, we design the split such that the valid set contains
+at least one intersection (out of four) is not part of the train set. For the test set, all four intersec-
+
+tions are novel. See our source code, available at https : //github . com/ f acebookresearch/
+talkthewalk, for more details on how this split is realized."
+Example
+"ACTIONzTURNRIGHT ACTIONzTURNRIGHT
+
+Hello, what are you near?
+
+ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzTURNLEFT
+
+Hello, in front of me is a Brooks Brothers
+
+ACTIONzTURNLEFT ACTIONzFORWARD ACTIONzTURNLEFT ACTIONzTURNLEFT
+
+Is that a shop or restaurant?
+
+ACTIONzTURNLEFT
+
+It is a clothing shop.
+
+ACTIONzTURNLEFT
+
+You need to go to the intersection in the northwest corner of the map
+ACTIONzTURNLEFT
+
+There appears to be a bank behind me.
+
+ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzTURNRIGHT ACTIONzTURNRIGHT
+
+0k, turn left then go straight up that road
+
+ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzFORWARD ACTIONzTURNRIGHT
+ACTIONzFORWARD ACTIONzFORWARD ACTIONzTURNLEFT ACTIONzTURNLEFT ACTIONzTURNLEFT
+There should be shops on two of the corners but you
+
+need to go to the corner without a shop.
+
+ACTIONzFORWARD ACTIONzFORWARD ACTIONzFORWARD ACTIONzTURNLEFT ACTIONzTURNLEFT
+let me know when you get there.
+
+on my left is Radio city Music hall"
+"Tourist:
+Guide:
+
+Tourist:
+Tourist:
+Tourist:
+Guide:
+
+Tourist:
+Tourist:
+Tourist:
+Guide:
+
+Tourist:
+Tourist:
+Tourist:
+Guide:
+
+Tourist:"
+Guide:
+"Tourist:
+Guide:
+Tourist:"
+19

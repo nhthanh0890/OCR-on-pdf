@@ -1,0 +1,56 @@
+"Model Decoding Train Valid Test Train Valid Test #steps
+
+Random 6.25 6.25 6.25 Random 18.75 18.75 18.75 -
+Human utterances 23.46 15.56 16.17 Human 76.74 76.74 76.74 15.05
+sampling 17.19 12.23 12.43 Best Cont. 89.44 86.35 88.33 34.47
+
+greedy 34.14 29.90 29.05 BestDisc. 86.23 82.81 87.08 34.83
+beam(size: 4) 26.21 22.53 25.02 BestNL 39.65 39.68 50.00 39.14
+
+. sampling 29.67 26.93 27.05
+P011” Grad' greedy 29.23 27.62 27.30"
+Supervised
+Policy Grad.
+"Table 3: Localization accuracy of tourist communi- Table 4: Full task evaluation of localization
+cating in natural language. models using protocol of Appendix E."
+"instructions, which is then executed by the tourist. The uncertainty in the tourist’s location is what
+drives the dialogue between the two agents."
+"Importance of actions We observe that the upperbound for only communicating observations
+plateaus around 57%, whereas it exceeds 90% when we also take actions into account. This implies
+that, at least for random walks, it is essential to communicate the tourist’s actions in order to achieve
+high localization accuracy."
+"MASC improves performance The MASC architecture signiﬁcantly improves performance com-
+
+pared to models that do not include this mechanism. For instance, for T = 1 MASC already achieves
+56.09 % on the test set and this further increases to 69.85% for T = 3 actions. On the other hand,
+
+no-MASC models hit a plateau at 43%. In Appendix D, we analyze learned MASC values, and show
+that communicated actions are often mapped to corresponding state-transitions."
+"Continuous vs discrete We observe similar performance for continuous and discrete emergent
+communication models, implying that a discrete communication channel is not a limiting factor for
+localization performance."
+"We report the results of tourist localization with natural language in Table 3. We compare accuracy
+of the guide model (with MASC) trained on (i) human utterances, (ii) a supervised model with various
+decoding strategies, and (iii) a policy gradient model optimized with respect to the loss of a frozen,
+pre—trained guide model on human utterances."
+"Generated utterances are more informative Interestingly, we observe that the supervised model
+(with greedy and beam- search decoding) as well as the policy gradient model signiﬁcantly outperforms
+human generated utterances in terms of localization accuracy. We analyze samples of these models in
+Appendix D, and show that, unlike human utterances, the generated utterances are talking about the
+observed landmarks. Hence, the tourist models learn to denoise the training signal via grounding,
+conditioning the language decoder on the encoded actions and observations."
+"Humans are bad localizers The fact that (i) our best emergent communication model is much
+stronger (achieving almost 70%) than our best localization model from human utterances (around
+20%, see Appendix D) and (ii) that generated utterances are more informative for localization than
+human utterances, suggests that humans are bad localizers because they do not always communicate
+their observations and actions well."
+Table 4 shows results for localization models on the full task.
+"Exceeding human performance Interestingly, our best localization model (continuous cornmuni—
+cation, with MASC, and T = 3) achieves 88.33% on the test set and thus exceed human performance
+of 76.74% on the full task. While emergent models appear to be stronger localizers, humans might
+cope with their localization uncertainty through other mechanisms (e.g. better guidance, bias towards
+taking particular paths, etc). The simplifying assumption of perfect perception likely also helps."
+"Number of actions Unsurprisingly, humans take fewer steps (roughly 15) than our best random
+walk model (roughly 34). Our human annotators likely used some form of guidance to navigate faster
+to the target. This gap is a challenge that should motivate developing more sophisticated models."
+

@@ -1,0 +1,44 @@
+Meier, Elezi, Amirian, Dﬁrr & Stadelmann
+
+
+"Fig. 1: Images of cats (top) and dogs (bottom) in urban (left) and natural (right)
+environments."
+"Grouping objects with machine learning is usually approached with clustering
+algorithms [16]. Typical ones like K—means [25], EM [14], hierarchical clustering
+[29] with chosen distance measure, or DBSCAN [8] each have a speciﬁc inductive
+bias towards certain similarity structures present in the data (e.g., K—means:
+Euclidean distance from a central point; DBSCAN: common point density). Hence,
+to be applicable to above-mentioned tasks, they need high-level features that
+already encode the aspired similarity measure. This may be solved by learning
+salient embeddings [28] with a deep metric learning approach [12], followed by
+an off-line clustering phase using one of the above-mentioned algorithm.
+
+However, it is desirable to combine these distinct phases (learning salient
+features, and subsequent clustering) into an end-to-end approach that can be
+trained globally [19]: it has the advantage of each phase being perfectly adjusted to
+the other by optimizing a global criterion, and removes the need of manually ﬁtting
+parts of the pipeline. Numerous examples have demonstrated the success of neural
+networks for end-to-end approaches on such diverse tasks as speech recognition
+[2], robot control [21], scene text recognition [34], or music transcription [35].
+
+In this paper, we present a conceptually novel approach that we call “learning
+to cluster” in the above-mentioned sense of grouping high-dimensional data by
+some perceptually motivated similarity criterion. For this purpose, we deﬁne
+a novel neural network architecture with the following properties: (a) during
+training, it receives pairs of similar or dissimilar examples to learn the intended
+similarity function implicitly or explicitly; (b) during application, it is able to
+group objects of groups never encountered before; (c) it is trained end-to-end in a
+supervised way to produce a tailor-made clustering model and (d) is applied like
+a clustering algorithm to ﬁnd both the number of clusters as well as the cluster
+membership of test-time objects in a fully probabilistic way.
+
+Our approach builds upon ideas from deep metric embedding, namely to
+learn an embedding of the data into a representational space that allows for
+speciﬁc perceptual similarity evaluation via simple distance computation on
+feature vectors. However, it goes beyond this by adding the actual clustering
+step—grouping by similarity—directly to the same model, making it trainable
+end-to-end. Our approach is also different from semi-supervised clustering [4],
+which uses labels for some of the data points in the inference phase to guide
+the creation of groups. In contrast, our method uses absolutely no labels during
+inference, and moreover doesn’t expect to have seen any of the groups it encounters
+during inference already during training (cp. Fig. 2). Its training stage may be"

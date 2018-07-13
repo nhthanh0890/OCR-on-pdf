@@ -1,0 +1,85 @@
+"Average Return
+
+Comparison between OLBO and baseline on noisy-cheetah env
+
+ 
+
+sun
+
+mu
+
+— OLBO (cum
+— LLMBVTRPO
+
+ 
+
+ 
+
+ 
+
+nu
+
+n2
+
+M
+
+05 ms
+Sample Complexity
+
+Ln
+
+:2
+
+1 4
+126"
+"Figure 2: Performance on noisy-cheetah environment. The discrepancy loss helps the agent to focus
+more on the useful states from noisy redundant states. All the experiments are run on 4 random seeds.
+It takes 120K data points to build the critic and therefore the curve starts at 120K."
+"model using TRPO [32], and c) collect more samples from the current policy. We call each outer
+‘model-TRPO-data’ iteration a stage for simplicity and convenience."
+"We note that the standard algorithms [28, 20] use mean—squared error (MSE) as the loss function. Our
+theory in Section 4.1 indicates that the norm (instead of the square of the norm) is a better learning
+objective and therefore we include Ll-MB-TRPO and LZ-MB-TRPO as baseline for completeness.
+Indeed, using the norm (either L1 or L2) as learning objective improves the performance. We perform
+these three simple but robust baselines with similar hyperparameter settings as detailed in Appendix."
+"OLBO on the benchmark We implement OLBO following the method in Sec.5. In each stage we
+optimize lower bound (3.3) (with discrepancy bounds being L1 as justiﬁed in Section 4.1) with
+respect to the model and the policy and collect the trajectories from the current policy. To optimize
+the lower bound (3.3), we alternate between maximizing the Vﬁ’M term using TRPO w.r.t the model
+and the policy (sing the reduction method in Section 5) and minimizing the term D(M, 7r) with
+respect to the model stochastically.8 Empirically we found the constraint (3.4) is not necessary and
+therefore drop it in the implementation. Pseudo-codes for OLBO and the baselines can be found in
+algorithmic boxes 2 and 3."
+"We warm—start our algorithm after running 3 stages of Ll-MB—TRPO baseline (in which 9e4 steps of
+real rollouts are used). In Fig. 1, we ﬁnd that all the model-based methods are more data efﬁcient
+in the early stage of training compared to model-free TRPO. Only OLBO achieves near optimal
+performance with comparably small amount of data. We believe that the beneﬁts mostly comes from
+the robust perspective of the algorithm: the parameter of the estimated model and the policy network
+are jointly optimized so that the policy have lower chance to overﬁt a ﬁxed estimated model. 9"
+"Discrepancy Loss on Noisy Environment We test the proposed discrepancy loss (4.8) on an artiﬁcial
+cheetah environment to test whether our algorithm is more robust to different state representation.
+We enlarge the state space by 10 coordinates and add noise in them. We perform the Ll-MB-TRPO
+
+baseline and train a critic network following the setting in DDPG [24] to estimate Vﬁ’M that appear
+in the discrepancy bound. After 3 stages, we ﬁx the critic network parameters. Then, we train from
+scratch by using a linear combination of the the discrepancy loss (4.8) and the L1 objective with
+a coefﬁcient 1e-3 as the discrepancy bound in (3.3). We ﬁnd that adding this term will constantly
+improve the learned model and thus achieve higher rewards as shown in Figure 2. In practice, the
+critic learning is unstable especially with the estimated model. We slowdown the soft update rate 100
+times. See Appendix E for more implementation details."
+
+Conclusions
+"We design a novel algorithmic framework for designing and analyzing model-based RL algorithms
+with the guarantee to convergence monotonically to a local maximum of the reward. Experimental
+results show that our proposed algorithm (OLBO) achieve near-optimal reward on the mujuco
+
+benchmarks swimmer and half cheetah, with much fewer samples than other model-based baselines
+and model-free RL algorithms.
+
+ 
+
+8Note that the norm discrepancy bound doesn’t depend on the policy.
+
+9We empirically found that maximizing the reward Vﬁ’M only over 7r also works, as long as the two terms
+in objective (3.3) are optimized alternatively."
+

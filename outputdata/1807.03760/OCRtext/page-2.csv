@@ -1,0 +1,366 @@
+The Human Moving Path Model
+2.2
+"Figure 3 shows the Markov Decision Process representing human moving behaviors.
+Generally speaking, in the left diagram of figure 2, the model contains three types of states:
+mental states (red), range detection (blue), and collision prediction (green). The mental states
+represent agents who are in the ﬂoor, in a particular gallery, interested by a target, or leaving
+the ﬂoor. Range detection states determine whether the agent is near or far away from the
+target. Collision prediction states prevent agents from colliding with each other. The middle
+diagram of figure 2 shows different functions for which the states are responsible. The orange,
+cyan, and purple color states deal with agents who are leaving, moving between the ﬂoor and
+the boundary, and moving between the boundary and the target. The right diagram of figure 2
+explains how human characteristics are modeled. In states 82, S4, and S9, several probability
+parameters and a density function describe the uncertainty of human behaviors. By applying
+different parameters, the model simulates different human characteristics."
+"Mme
+AI mam
+hurl
+
+   
+    
+ 
+   
+
+(named
+
+ 
+
+ 
+     
+
+mum
+
+Safe
+
+ 
+ 
+
+Saie
+
+(carded
+
+ 
+
+mm Move
+chavdsTalqel
+
+m to Mm
+Yuwardx Yavgel
+
+m In Move
+mmeW
+
+ 
+
+Fay
+
+  
+      
+ 
+ 
+      
+ 
+
+   
+ 
+
+ 
+
+gm in
+MM.“ “New
+Valve! Sm» M m) 7 2'""
+Find A = M
+@
+mo, P2 mum
+m mm
+
+ 
+
+ 
+
+ 
+
+ 
+
+Fay
+
+mm. a
+Buundi'y
+
+ 
+
+ 
+
+ 
+  
+   
+  
+  
+    
+   
+ 
+ 
+  
+
+ 
+
+Behavior Model
+
+Scam rm:
+I Mam)‘ Sums
+
+I am. Damn
+I mm Mum
+
+ 
+   
+  
+  
+
+AI szlds
+
+ 
+
+(anded
+
+   
+   
+
+53o
+
+ 
+ 
+   
+ 
+  
+    
+
+ 
+
+save
+
+Cnlhded
+
+Move
+Inward:
+Tamer
+
+  
+
+ 
+
+sz
+
+ 
+
+ 
+ 
+   
+
+   
+ 
+
+ 
+
+ 
+
+Szakh an
+\memslmg mus Dewy
+Yavge: imp M m) 7 .7»
+mm Mme rm /|_‘ k= N
+Iawammmex \“H
+mm"" [,1 u."" may
+Fm ‘ 7 pm
+
+ 
+
+ 
+
+ 
+
+m m Mm
+waavdshvgel
+
+ 
+
+   
+   
+    
+   
+     
+     
+ 
+
+m re Move
+Tawaldshvgex
+
+ 
+
+ 
+
+Behavior Model
+
+Sm: Funmons
+I mm:
+
+I mam""
+I Boundary mu
+
+ 
+
+ 
+  
+ 
+ 
+   
+
+ 
+
+   
+ 
+
+sm 53¢:
+xlnxmw»
+
+   
+
+  
+
+Safe
+
+(omen
+
+Co‘llded
+
+ 
+
+sa Far
+(mum;de
+
+  
+
+mm Mm
+chavds Yalgel
+
+Cannot
+rm
+
+  
+    
+
+m
+
+ 
+
+sunk in
+lmelesdng
+
+  
+  
+ 
+      
+ 
+ 
+
+nm Dewy
+u r Pm
+
+ 
+
+ 
+
+mm Mme
+VawavdsYanex
+
+ 
+
+ 
+
+ 
+
+@
+4h
+
+ 
+
+ 
+    
+       
+    
+
+Sm
+
+Move
+mm
+Yams!
+
+(9‘1.de
+
+\H
+
+mm Move
+Towavdealgel
+
+ 
+
+  
+ 
+  
+
+ 
+  
+ 
+
+57 h.
+[Lem/mg n
+
+ 
+
+  
+     
+      
+    
+ 
+  
+
+ 
+
+Behavior Model
+
+(harazlevmlu
+I Selnhmglﬁmmdaly‘l
+I Looking “mm
+
+r l Searhmglhlggﬂ
+
+Near END"
+Figure 2: The general ideas of the model.
+"When an agent enters the exhibition space, the state starts from SZ. 82 means that the agent is
+in the ﬂoor and can take two actions: searching a boundary of a small gallery (A2) with a P1
+transition probability or searching an exit (A5) with a l-Pl probability. The state then goes to
+S3 if the agent in 82 takes A2 and finds a boundary that hasn’t been visited before, which
+means that the agent is far away from the boundary. The state goes to 81 if the agent cannot
+find a boundary, which means that the agent wants to leave the ﬂoor. On the other hand, the
+state goes to S7 if the agent in 82 takes A5 and finds an exit, which means that the agent is far
+away from the exit."
+"In S3, the agent takes A3, trying to move one step towards the target according to the path
+computed by A2. If the agent will collide with another one, the state goes back to S3.
+Otherwise the state goes to S5. S5 means that the agent can move safely. In S5, the agent takes
+Al, moving one step towards the target. Then the state goes to S4 or S3 if the agent is near or
+
+far from the boundary."
+"In S1 and S4, the model applies similar processes described in the last two paragraphs. But
+there is a large difference when the state starts from S4, goes through S8 and S10, and reaches
+S9. S9 means that the agent is near and looking at the exhibit in a particular small gallery. In
+S9, the agent stops (A4) at the same location. Then the model uses an exponential time decay
+function P(t = e‘“ to compute the probability that the state goes to S4 or itself. If the A
+factor is large, P(t) decays faster, and vice versa. When the time goes on, the agent will have
+a lower probability to keep looking at the same exhibit and will have a higher probability to
+go to S4 and to search for another exhibit. If the state goes back to S4, it has a P2 probability
+
+to keep searching another exhibit and a l-P2 probability to goes back to S2 and to search for
+another boundary."
+"A2, A5, and A6 use a modified weighted A* search algorithm to quickly find a sub-optimal
+moving path to a nearby target. The detail of weighted A* is beyond the range of this paper.
+Please refer to [4] for more information. The heuristic function is the Manhattan distance [1]
+between the current and the starting location. The modified version of weighted A* adds a"

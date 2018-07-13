@@ -1,0 +1,69 @@
+Testing Global Constraints
+
+"This class implements the filter function as a trusted ﬁltering algorithm
+reaching the arc consistency by 1) computing the Cartesian product of the do-
+mains, 2) ﬁltering with the checker the non solutions and 3) creating the ﬁltered
+domains as the the union of the values. Similar ﬁltering algorithms’ (Bound-Z,
+Bound-D and Range) have been implemented from a checker.
+
+Finally the check and stronger functions permit to respectively check that
+two compared ﬁltering algorithms are the same or that the tested ﬁltering is
+stronger than the trusted one."
+"1 def Check/stronger(trustedFiltering:
+Filter) : Boolean"
+Filter, testedFiltering:
+"The testing involves the following steps:
+1. Random Domains generation 2.
+2. Execution of the tested and trusted ﬁltering algorithms (from CPChecker’s
+ﬁlterings or another trusted one) to these random domains.
+3. Comparison of the domains returned by the two ﬁltering algorithms.
+This process is repeated by default 100 times although all the parameters can
+
+be overridden for the creation of random domains, number of tests, etc."
+Generation of Random Test Instances
+2.1
+"In order to test a ﬁltering implementation, CPChecker relies on a property based
+testing library called ScalaCheck[9]3. This library includes support for the cre-
+ation of random generators and for launching multiple test cases given those.
+CPChecker also relies on the ability of ScalaCheck of reducing the instance to
+discover a smaller test instance over which the error occurs."
+Example
+2.2
+"Here is an example for testing with CPChecker the arc-consistent AllDiﬁerent
+constraint’s in OscaR [2] solver :"
+"1 object ACAllDiffTest extends App {
+3 def allDiffChecker (x: Array[lnt]): Boolean = x.toSet.size
+
+H
+
+x.length
+
+E val trustedACAllDiff: Filter 2 new ArcFiltering(
+allDiffChecker)
+
+val oscarACAllDiff: Filter 2 new Filter {
+
+override def filter(variables: Array[Set[Int]]): Array[Set
+[IntH ={
+
+n val cp: CPSolver = CPSolver()
+
+val vars = variables.map(x => CPIntVar(x)(cp))
+
+a val constraint 2 new AllDiffAC(Vars)
+
+a try {
+
+2 A seed can be set to reproduce the same tests.
+
+3 Similar libraries exist for most programming languages, all inspired by QuickCheck
+for Haskell."
+
+Filter 2 new ArcFiltering(
+
+
+
+
+
+
+

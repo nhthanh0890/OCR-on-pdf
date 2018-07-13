@@ -1,0 +1,60 @@
+"the true value function from sample trajectories, and maximizes it over both the dynamical model and
+the policy. The real value function is guaranteed to monotonically increase (assuming the planning
+succeeds in each iteration.) To the best of our knowledge, this is the ﬁrst theoretical guarantee of
+monotone improvement for model-based reinforcement learning. The framework also incorporates
+an optimism-driven perspective, and reveals the intrinsic measure of the model prediction error."
+"More concretely, the key idea of the paper is we can use an estimated model and sample trajectories
+to build a provable lower bound of the real value function V”:"
+"V7r >
+V7r
+D7r,M"
+(1.1)
+"Here l7” is the value function of the policy 7r on the estimated model M: and DEM is a designed
+
+discrepancy bound D that captures the intrinsic difference between the estimated model if and the
+real dynamical model M *."
+"Since discrepancy bound D7""M is invariant to the representation of the state space it may lead to
+a better design of loss function for learning dynamical models. Under certain assumptions and
+simpliﬁcation, our theory can recover the standard model-based RL algorithms but suggests that
+[2 or £1 norm loss is preferable compared the mean-squared error (MSE). As shown below, we
+indeed observe that [2 and [1 losses signiﬁcantly outperform MSE baseline in continuous tasks in
+Mujoco [42]."
+"We also justify our framework by showing that jointly optimizing policy and dynamical model yields
+better results compared to the standard scheme of tuning the model and policy separately. Readers
+may have realized that optimizing a robust lower bound is reminiscent of robust control and robust
+optimization. We remark that the Vital distinction is that we optimistically and iteratively maximize
+
+the RHS of (1.1) jointly over the model IT? and the policy 7r, which compensates the conservatism
+from the lower bound."
+"Last but not the least, we remark that the most sophisticated theoretical results in Section 4.3 develop
+and utilize new mathematical tools that measure the difference between policies in X2-divergence
+(instead of KL or TV). These tools may be of independent interests and used for better analysis of
+model-free reinforcement learning algorithms such as TRPO [32], PPO [34] and CPO [3]."
+1.1
+Related work
+"Model-based reinforcement learning are known to require fewer samples than model-free algo-
+rithms [9] and have been successfully applied to robotics in both simulation and in the real
+world [8, 27, 10] using dynamical models ranging from relatively simple models such as Gaus-
+sian process [8, 19], time-varying linear models [23, 25, 21, 43], mixture of Gaussians [17], to
+multi—layer neural networks [14, 28, 20, 41]. In particular, the work of Kurutach et al. [20] uses
+an ensemble of neural networks to learn the dynamical model signiﬁcantly reduced the sample
+complexity compared to model-free approaches. In contrast, we focus on theoretical understanding
+of model-based RL to design of new algorithms, and our experiments use a single neural network to
+approximate the dynamical model."
+"Prior work explores a variety of ways of combining model-free and model-based ideas to achieve the
+best of the two methods [38, 37]. For example, learned models [23, l3, 16] are used to enrich the
+replay buffer in the model-free off-policy RL. The work of Pong et a1. [41] proposes goal-conditioned
+value functions trained by model-free algorithms and use it for model-based controls. The work
+of Feinberg et a1. [12] uses dynamical models to improve the estimation of the value functions in
+
+model-free algorithms."
+"Recent work [7, 6] provide the strong ﬁnite sample complexity bounds for solving linear quadratic
+regulator (linear dynamical system with quadratic reward function) using model-based approach.
+Boczar et a1. [4] provide ﬁnite-data guarantees for the “coarse-ID contro ” pipeline, which is composed
+of a system identiﬁcation step followed by a robust controller synthesis procedure. Our method, by
+
+contrast, applies to non-linear dynamical systems. Our algorithm also estimate the models iteratively
+based on sampled trajectories from the learned policies."
+"The work [39, 40] analyzes the behavior of Dyna-like algorithms when both value function and
+dynamics are linear with TD(0). Abbeel et al.[2] shows such iterative approaches converge to a"
+

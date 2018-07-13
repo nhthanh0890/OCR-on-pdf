@@ -1,0 +1,32 @@
+"JL-—_|
+
+“_
+_
+_ _"
+
+Figure 5: Left: the simulation. Right: the density map.
+"The left image of figure 5 is the simulation of the model. Agents start from the elevator lobby
+at the bottom-left of the ﬂoor. The black color objects in the map indicate the structure (e. g.
+walls and columns) of the building. The red color ones indicate Windows and light courts. The
+green and blue color ones indicate the exhibits and the agents."
+"There are several parameters in the simulator. If the total number of agents in the floor is
+smaller than 30, the simulator adds 1 to 10 agents randomly and iteratively after a constant
+time span. The model randomly assigns the threshold between 10 and 20 pixels to define
+whether the agent is near or far away from its target. The model also randomly assigns values
+to P1, P2, and Al to simulate different human characteristics. The lower and upper bounds of P1
+and P2 are 0.5 and l. The lower and upper bounds of Al is 1/7000 and 1/500. In the modified
+
+weighted A* search algorithm, the weight used is 10. The variance of the random noise added
+in the heuristic function is 1000."
+"The right image of figure 5 is the density map which shows how likely that an agent will occur
+in the location. The brighter the pixel, the higher the probability. After an amount of time, the
+map converges. Density map is an important evaluation of the ﬂoorplan. For instance, in figure
+6, the left-most image shows that the density on the boundaries facing the entrance is higher.
+The architect might need to increase the size of these openings. The left-middle image
+illustrates that the density in the gallery near the entrance is higher. The size of the gallery
+might need to be increased. In the right-middle image, there are a lot of paths inside the red
+box. The architect can design a resting area here for people walking by. The right-most image
+indicates the way to increase the user experience. Placing eye-catching exhibits at some
+locations can strengthen the connectivity between small galleries."
+
+Figure 6: The evaluation of the floorplan using density map.

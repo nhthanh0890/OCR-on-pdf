@@ -1,0 +1,47 @@
+Meier, Elezi, Amirian, Dﬁrr & Stadelmann
+
+"and let the neural network training optimize A through Ltot without intermediate
+losses. The matrix A as used in di can be thought of as a trainable distance
+metric. In every training step, it is projected into the space of positive semideﬁnite
+matrices."
+Experimental results
+
+"To assess the quality of our model, we perform clustering on three different
+datasets: for a proof of concept, we test on a set of generated 2D points with a high
+variety of shapes, coming from different distributions. For speaker clustering, we
+use the TIMI T [9] corpus, a dataset of studio-quality speech recordings frequently
+used for pure speaker clustering in related work. For image clustering, we test on
+the COIL-100 [30] dataset, a collection of different isolated objects in various
+orientations. To compare to related work, we measure the performance with
+the standard evaluation scores misclassiﬁcation rate (MR) [22] and normalized
+mutual information (NMI) [27]. Architecturally, we choose m = 14 BDLSTM
+layers and 288 units in the FC layer of subnetwork (b), 128 units for the BDLSTM
+in subnetwork (d), and 04 = 0.3 for all LeakyReLUs in the experiments below.
+All hyperparameters where chosen based on preliminary experiments to achieve
+reasonable performance, but not tested nor tweaked extensively. The code and
+further material and experiments are available onlinel.
+
+We set kmax = 5 and A = 5 for all experiments. For the 2D point data, we use
+n = 72 inputs and a batch-size of N = 200 (We used the batch size of N = 50 for
+metric learning with 2D points). For TIMIT, the network input consists of n = 20
+audio snippets with a length of 1.28 seconds, encoded as mel—spectrograms with
+128 x 128 pixels (identical to [24]). For COIL-100, we use n = 20 inputs with
+a dimension of 128 x 128 x 3. For TIMIT and COIL-100, a simple CNN with
+3 conv/max-pooling layers is used as subnetwork (a). For TIMIT, we use 430
+of the 630 available speakers for training (and 100 of the remaining ones each
+for validation and evaluation). For COIL-100, we train on 80 of the 100 classes
+(10 for validation, 10 for evaluation). For all runs, we optimize using Adadelta
+[43] with a learning rate of 5.0. Example clusterings are shown in Fig. 5. For all
+conﬁgurations, the used hardware set the limit on parameter values: we used the
+maximum possible batch size and values for n and kmax that allow reasonable
+training times. However, values of n 2 1000 where tested and lead to a large
+decrease in model accuracy. This is a major issue for future work.
+
+The results on 2D data as presented in Fig. 5a demonstrate that our method
+is able to learn speciﬁc and diverse characteristics of intuitive groupings. This
+is superior to any single traditional method, which only detects a certain class
+of cluster structure (e.g., deﬁned by distance from a central point). Although
+[24] reach moderately better scores for the speaker clustering task and [42] reach
+a superior NMI for COIL-100, our method ﬁnds reasonable clusterings, is more
+ﬂexible through end-to—end training and is not tuned to a speciﬁc kind of data."
+1 See https: //github.com/kutoga/learning2cluster.

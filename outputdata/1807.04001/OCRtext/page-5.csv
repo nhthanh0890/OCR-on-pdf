@@ -1,0 +1,30 @@
+Meier, Elezi, Amirian, Diirr & Stadelmann
+
+
+
+"Fig. 4: RBDLSTM—layer: A BDLSTM with residual connections (dashed lines).
+The variables mi and y are named independently from the notation in Fig. 3."
+"cluster assignments for each input and every possible number of clusters). The
+second output, produced by the cluster—count estimating network (d), is built
+from another BDLSTM—layer. Due to the bi—directionality of the network, we
+concatenate its ﬁrst and the last output vector into a fully connected layer of
+twice as many units using again LeakyReLUs. The subsequent softmax—activation
+ﬁnally models the distribution P(l€) for 1 S k S kmax. The next subsection shows
+how this neural network learns to approximate these two complicated probability
+distributions [20] purely from pairwise constraints on data that is completely
+separate from any dataset to be clustered. No labels for clustering are needed."
+Training and loss
+3.2
+"In order to deﬁne a suitable loss—function, we ﬁrst deﬁne an approximation
+(assuming independence) of the probability that m and Q are assigned to the
+same cluster for a given k as"
+
+"By marginalizing over k, we obtain Pij, the probability that mi and Q belong to
+the same cluster:"
+
+"Let yij = 1 if sci and xj are from the same cluster (e.g., have the same group
+label) and 0 otherwise. The loss component for cluster assignments, Lea, is then
+given by the weighted binary cross entropy as"
+"—2
+Lca = m 2 (leij 10g(Pij) + ¢2(1 — yij) 10g(1 — PM)
+i<j"

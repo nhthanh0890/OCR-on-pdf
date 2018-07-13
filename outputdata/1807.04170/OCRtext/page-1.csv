@@ -1,0 +1,41 @@
+"effective here and are used to manipulate mass [Dubois and Prad 1988]. They are
+generally used in the decision system as they can formalize decision criteria from
+fuzzy information, especially when evidence theory is used. Finally, we propose to
+express the needs of the information consumer, which are viewed as constraints on
+the decision process. This allows to choose and compute the decision, i.e. action to
+be done, in accordance with the consumer's needs and use.
+
+Posture recognition carried out by a human is complex and the decision process
+takes into consideration criteria like hesitation between known postures or belief
+in a recognition posture. Fuzzy logic facilitates the manipulation of these con-
+cepts. In the case of automatic and artificial processes for human posture recogni-
+tion, we show that results of fusion methods associated to the evidence theory are
+a good way to express consumer criteria, which are finally used to select the de-
+fuzzification method.
+
+This approach, illustrated in section 4, is used to give orders to a humanoid
+NAO robot developed by the Aldebaran Company, from human posture recogni-
+tion. The system learns a set of reference postures, each one corresponding to an
+order chosen to be transmitted to the robot. For example: the user wants the robot
+to execute an order only if the recognition of the corresponding human posture is
+sure, i.e. with low uncertainty or not ambiguous with other possible reference pos-
+tures. Another example: a posture corresponds to an emergency action. In this
+case, if this posture is recognized with enough certainty, the corresponding order
+is chosen even if another posture is recognized at the same time, but with a greater
+certainty.
+
+In section 2, we present posture modeling using fuzzy representation. Section 3
+details the posture recognition process.
+
+In section 4 the decision process is described using distance criteria from leam—
+ing reference postures. This approach allows for deﬁning and formalizing user
+constraints like recognition quality or threshold distance of posture detection. Fa-
+cilitating the decision process based on mass transfers inside fuzzy representation
+of human posture is introduced.
+
+User constraints are thrown back to the decision system which is now able to
+choose the robot order to be applied, in accordance to user expectation."
+2 Fuzzy logic for human posture modeling
+"This section goes back over the concepts of fuzzy nominal scale and metrical scale
+presented in [Benoit and Foulloy 2013] that are used to represent postures."
+2.1 Fuzzy representation: fuzzy nominal scale

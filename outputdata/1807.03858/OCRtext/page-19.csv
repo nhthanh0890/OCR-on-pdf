@@ -1,0 +1,35 @@
+"Algorithm 2 L 1 -model—based-TRPO
+
+0: parameters for the estimated mode; ¢z parameters for policy network; m: the number of steps
+for TRPO; M: the estimated model; ammo” the exploratory policy.
+Initialize 7r¢J and Mg; A dataset D = (Z)
+for stage t E {1, 2, ...} do
+
+1. Sample N trajectories with «gamma and concatenate them in 1); remove old trajectories if
+the size of D exceeds size R. ~
+
+2. Sample triplets from D and update the parameters 0 of model M g by performing k steps of
+stochastic gradient descents with Ll loss.
+
+3. run TRPO with model Mg as an environment for m steps.
+end for"
+"Algorithm 3 Optimistic Lower Bound Optimization (OLBO)
+
+0: parameters for the estimated mode; ¢z parameters for policy network; m: the number of steps
+for TRPO; M: the estimated model; «WWW the exploratory policy.
+Initialize 7r¢J and Mg; A dataset D = (Z)
+for stage t E {1, 2,  do
+
+Sample N trajectories with wgwpl‘m and concatenate them in 1); remove old trajectories if the
+size of D exceeds size R.
+
+fori 6 {1,2,  do
+
+Sample triplets from D, and update the parameters 0 of model Mg by minimizing the
+
+discrepancy bounds D with stochastic gradient descent for k steps.
+
+Jointly optimize model Mg and policy 7r¢J with TRPO as described in 5 for m steps.
+end for
+end for"
+20

@@ -1,0 +1,34 @@
+Testing Global Constraints
+
+Custom Assertions
+
+"To ease the integration into a J Unit like test suite, CPChecker has custom as-
+sertions extending the Assert] [11] library. The classes FilterAssert and
+FilterWithStateAssert follow the conventions of the library with the filterAs
+
+and weakerThan functions to respectively test a ﬁltering algorithm, as in the
+check and stronger functions. An example of assertion is:"
+1 assertThat (tested) . filterAs(trusted1) .WeakerThan(trusted2)
+Code Source
+
+"CPChecker’s code source is publicly available in the Github repository4. This
+repository also contains several examples of usage of CPChecker with both Scala
+solver and Java solvers, namely OscaR[2], Choco[1] and Jacop From those
+examples, CPChecker detected that the arc consistent ﬁltering of the Global
+Cardinality constraint of OscaR was not arc consistent for all the variables (the
+cardinality variables). This shows the genericity of CPChecker and that it can
+be useful to test and debug ﬁltering algorithms with only a small workload for
+the user. Further details on the architecture and implementation of CPChecker
+can be found in the Master Thesis document available at the github repository4."
+Conclusion and Future Work
+
+"This article presented CPChecker, a tool to test ﬁltering algorithms implemented
+in any JVM-based programming language based on the JVM. Filtering algo-
+rithms are tested over domains randomly generated which is eﬁicient to ﬁnd un-
+expected bugs. Principally written in Scala, CPChecker can be used to test sim-
+ple and stateful ﬁltering algorithms. It also contains its own assertions system to
+be directly integrated into test suites. As future work, we would like to integrate
+into CPChecker properties of scheduling ﬁltering algorithms [12] such as edge-
+ﬁnder, not-ﬁrst not-last, time-table consistency, energy ﬁltering, etc. for testing
+the most recent implementation of scheduling algorithms [13,14,15,16,17,18]."
+4 https: //github.com/vrombouts/Generic-checker-for— CP-Solver—s—constraints

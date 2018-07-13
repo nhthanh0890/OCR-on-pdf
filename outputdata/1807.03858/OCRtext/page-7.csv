@@ -1,0 +1,96 @@
+"Comparison against baselines on Half-Cheetah
+
+ 
+
+ 
+
+m
+
+srm
+
+m
+
+  
+ 
+
+— amorwm
+
+Average Return
+
+uruarrlvo
+
+ 
+
+ 
+
+ 
+
+ 
+
+3 4
+Sample Complexity m
+
+Comparison against baselines on Swimmer
+
+Hummus)
+L144!an
+magma
+— user-13W"":
+— MFJIPU
+_ mm
+
+Average Return
+
+ 
+
+ 
+
+ 
+
+a‘n uz DI as u u 15
+
+n. In
+Sample Complexity ""5"
+"Figure 1: Performance on the benchmark Mujoco tasks. The x—axis shows the sample complexity (in
+the number of steps). The y-axis is the average return. Solid lines are average values over 5 random
+seeds for model-based method. Model-free learning curve is shown for reference. The initial 9e4
+steps of OLBO uses regular Ll-MB-TRPO. The optimal reward is computed by running model-free
+TRPO until convergence."
+Implementing Optimism-driven Approach by Reduction to Standard RL
+
+"In Algorithm 1, we propose to maximize V — D over the policy and the dynamical model. We have
+discussed the optimization of discrepancy bounds when deﬁne them. In this section we show that
+maximizing VWM over the policy 7r and the model M can be reduced to a standard RL problem and
+therefore we can call any model-free RL algorithms."
+"The reduction works by designing a new environment M and new policy 7? so that optimizing 7? only
+with environment M is equivalent to optimizing (7T, M Concretely, we enlarge the action space to
+be .1 : A X S. The policy fr returns a concatenation of the real action produced by 7r and the next
+state, and the dynamical model M just read off the next state from action 7~r(S):"
+vs 6 3,51 6 A X s, 7%(3) é (7r(s),M(s,7r(s))) and 3413,51) é as
+(5.1)
+Here [15 denotes the restriction of a into the second set of coordinates w.r.t. the space 8.7
+"We have that (M, 7?) is equivalent to (M, 7r) in terms of the distributions of the states, and M is
+ﬁxed dynamics. Therefore, optimizing 7? is equivalent to optimizing (M, 7r). Moreover, we note
+that such a translation preserves most, if not all, properties of the parameterization of 7r and M: if
+7r and M are deterministic and differentiable, then so is 7?; if stochastic 7r and M can be efﬁciently
+
+sampled, or are re-parameterizable [18], so is 7?; if the density of 7r and M can be evaluated, then so
+is 7~r(&|s) = 7r(&A|s) . M(&A|s, (1A);"
+
+Experiments
+"We provide proof-of—concepts evaluations for the theory developed in the previous sections. We ﬁrst
+demonstrate that our proposed algorithm, Optimistic Lower Bound Optimization (OLBO), which
+uses the norm-based discrepancy bound developed in Section 4.1 in the Framework 1, outperforms
+(in sample complexity) standard model—based RL baselines in swimmer and half—cheetach benchmark
+in mujuco. Second, we apply the discrepancy bound in Section 4.2 and show that it helps the
+performance in an artiﬁcial noisy half-cheetach environment, which indicates the discrepancy bounds
+that are more robust to the change of state representations and thus may serve as a better learning
+objective for the dynamical model. Environment specs are in Appendix E.1."
+"Baselines The baselines include MSE-MB-TRPO, Ll-MB-TRPO and L2-MB-TRPO, Where the
+algorithms iteratively: a) learn the dynamical model With loss function MSE, L1 and L2 norm
+respectively, using the existing trajectories, b) policy optimization With the estimated dynamical
+
+ 
+
+7When 7r is stochastic, the two occurrences of 7r(s) in equation (5.1) are deﬁned to use the same randomness."
+

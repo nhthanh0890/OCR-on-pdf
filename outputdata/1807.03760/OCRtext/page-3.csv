@@ -1,0 +1,155 @@
+"uniformly distributed random noise to the heuristic function, as shown in the left image of
+figure 4. The darker the color, the smaller the heuristic value, and vice versa. The random
+anpmwmmmagmﬁmnmwmgWWCMEWmﬂmwmmbsﬂmeMMmgmﬁﬁwm
+4 shows the expanded nodes. The red and yellow color indicates the CLOSE set and OPEN
+set. The white and black color indicates obstacles and empty area. The right image of figure 4
+shows the sub-optimal path from the entrance to the boundary of a small gallery.
+
+  
+     
+   
+   
+
+59: Look At
+The Target
+
+ 
+   
+  
+ 
+    
+   
+
+Far
+
+      
+   
+
+ 
+
+58: Far
+(Interested)
+
+  
+
+Search an
+
+Interesting
+Target Stop
+
+     
+ 
+
+Time Decay
+P(t) = 9””
+A : M
+
+    
+  
+ 
+ 
+  
+
+ 
+   
+  
+ 
+ 
+
+   
+   
+
+SI 0: Safe
+
+Try To Move
+(Interested)
+
+Towards Target
+
+  
+  
+  
+
+Time Decay
+I — P(t)
+
+ 
+ 
+
+  
+ 
+  
+ 
+ 
+    
+  
+  
+
+53: Far
+(Boundary)
+
+ 
+   
+
+Search a
+Boundary
+
+ 
+  
+  
+ 
+
+  
+ 
+ 
+  
+
+ 
+
+55: Safe
+
+Try To Move
+(Boundary)
+
+Towards Target
+
+   
+  
+ 
+   
+ 
+
+Try To Move
+Towards Target
+
+  
+ 
+
+56: Safe
+(Leaving F)
+
+Behavior Model
+
+Markov Decision Process
+
+  
+
+E] Action
+El State
+
+ 
+
+L ' F
+(eavrng ) Far
+
+END"
+"Behavior Model
+
+Markov Decision Process
+I] Action
+
+El State"
+Figure 3: The behavior model of human moving paths.
+
+
+Figure 4: The modified weighted A* search algorithm.

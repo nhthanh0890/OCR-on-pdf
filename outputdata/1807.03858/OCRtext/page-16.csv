@@ -1,0 +1,53 @@
+
+Toolbox
+"Deﬁnition D.1 (X2 distance, c.f. [29, 5]). The Neyman X2 distance between two distributions p and
+q is deﬁned as"
+
+(D.1)
+"For notational simplicity, suppose two random variables X and Y has distributions p X and py, we
+often write X2 (X, Y) as a simpliﬁcation for X2 (p X, py).
+
+Theorem D.2 ([31]). The Kullback-Leibler (KL) divergence between two distributions p, q is bounded
+from above by the X2 distance:"
+K L(p, q) S X2(P, q)
+(D.2)
+Proof. Since log is a concave function, by Jensen inequality we have
+"KL(p q) = /p(m) Iog’ﬂdx 3 log /p(w)-
+
+«1(17)
+= log(X2(p, q) + 1) s x2(p, q)"
+
+"Deﬁnition D.3 (X2 distance between transitions). Given two transition kernels P, P’. For any
+distribution u, we deﬁne xﬂP’ , P) as:"
+"2
+
+(PCP)
+
+A
+
+/ u(w)x2(P’(-|X = x), P(-|X = mndm"
+(D.3)
+Theorem D.4. Suppose random variables (X, Y) and (X ’ , Y’ ) satisfy that leX = pY/IX/. Then
+X2(Y,Y’) S X2(X,X’)
+(D.4)
+0r equivalently, for any transition kernel P and distribution a, u’, we have
+X2(P/Ja PM) E X2(M,M’)
+(D5)
+"Proof. Denote py|X(y | at) = py/IX/(y | at) by p(y | 1:), and we rewriter asp and pX/ asp’. By
+Cauchy-Schwarz inequality, we have:"
+
+(D.6)
+It follows that
+"W)2 d1, _ 1 = X2(X, X’)
+py(y)2 _ 1 g dy MW) ’(m)
+x2041”) = / My) dy / / p"
+
+Theorem D.5. Let X, Y, Y’ are three random variables. Then,
+X2051”) S E [X2(Y|Xa Y'IX)]
+(D.7)
+"We note that the expectation on the right hand side is over the randomness of X. 10 As a direct
+corollary, we have for transition kernel P’ and P and distribution a,"
+"X2(P’u, PM) E XﬂP’, P)
+10Observe x2 (Y|X, Y’|X) deternﬁnistically depends on X."
+(D.8)
+17

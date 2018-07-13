@@ -1,0 +1,99 @@
+Testing and debugging ﬁltering of global constraints
+
+Illustration over an Example
+3.2
+"The next example illustrates CPChecker to test the OscaR[2]’s ﬁltering for the
+constraint  xi = 15. It should reach Bound-Z consistency.
+
+1 object SumBCInchest extends App {"
+
+"def sumChecker(x: Array[Int]): Boolean = x.sum = 15
+
+val trusted = new IncrementalFiltering(new BoundZFiltering(
+sumChecker))
+
+val tested 2 new FilterWithState {
+val cp: CPSolver = CPSolver()
+var currentVars: Array[CPIntVar] = _"
+
+
+
+
+
+
+"override def branchAndFilter(branching: BranchOp): Array[
+Set [Int  ={
+branching match {
+case _: Push => cp. pushState 
+case _: Pop => cp.pop()
+case r: RestrictDomain => try {
+r.op match {
+
+77_77
+
+case — => cp.post(currentVars(r.index)
+
+ 
+
+ 
+
+l—I"
+
+
+
+12
+
+14
+15
+
+"} catch {
+l_|Case _: Exception => throw new NoSolutionException"
+
+
+
+
+
+"}
+
+currentVars .map(x => x. toArray . toSet)
+
+}"
+
+
+22
+
+"override def setup(variables: Array[Set[Int]]):
+Int]] 2 {
+currentVars = variables.map(x => CPIntVar(x))
+try {
+solver.post (sum(currentVars) = 15)
+} catch {
+
+Array [Set ["
+24
+
+
+
+
+29
+"m }
+
+currentVars.map(x => x.toArray.toSet)
+E }
+
+E }
+
+34 Check(trusted, tested)
+
+35}"
+
+
+
+33
+"In this example, two FilterWithState are compared with the check function.
+
+In CPChecker, the IncrementalFiltering class implements the
+FilterWithState abstract class for any Filter object. Therefore, the
+IncrementalFiltering created with a BoundZFiltering object is used as the
+trusted ﬁltering (line 4) which it-self relies on the very simple sumChecker func-
+tion provided by the user and assumed to be bug-free."

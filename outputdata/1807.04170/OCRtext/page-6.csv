@@ -1,0 +1,59 @@
+"postures. Each modal posture is known by a word in the system. Reference pos-
+tures can be expressed in terms of mass on known modal postures. The mass crite-
+rion is computed from the reference posture and each known modal posture.
+Hence, a reference posture Prefis written as:"
+Pref: (LP-mad], LP-mad, 2, LP-maaﬂ3, . . . , 1413411051,”)
+(4)
+"where n is the (maximum) number of modal postures (contained in Lp.mgd).
+Note that terms associated with no-neighbor modal postures, if they appear, are set
+
+to 0.
+
+0'4 “i m"
+0,341
+0,35 f
+0,3
+0,257
+0,25 f
+0,187
+
+0,15 f
+
+0,054
+0,039
+0,022
+0,05
+"0,012 0,016
+_—_'_-_"
+
+
+
+
+
+
+
+
+
+
+"Fig. 3 ""stop"" reference posture representation."
+"Table 3 illustrates the ""stop"" reference posture. In this example, the reference pos-
+ture is given in table 3 and fig. 3."
+"Table 3. ""stop"" reference posture determination
+
+from up outside . .
+0.1653 0.7847 0.0501 m"" '""S‘de
+open down from up outside rear imide
+0.4348 0.07187 0.3411 0.02178 ‘
+
+downfolded frontfolded upfolded outsidefolded rearfolded insidefolded
+
+ 
+
+fronlhmiddle uphmiddle outsidehmiddle
+0.03930 0.1866 0.01191
+
+vmiddle . fronlvmiddle upvmiddle outsidevmiddle . . . .
+0.3274 downvmlddle 0.05412 0.2569 0.01640 1n51devm1ddle
+
+downhmiddle rearhmiddle insidehmiddle"
+The next section presents a detection posture process.

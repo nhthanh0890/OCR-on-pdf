@@ -1,0 +1,34 @@
+Decision method choice in a human posture
+recognition context
+Stéphane Perrin, Eric Benoit, Didier Coquin
+"LISTIC Lab - Université Savoie Mont Blanc, Annecy, ance
+{stephane.perrin, ericbenoit, didier.coquin}@univ-smb.fr"
+"Abstract. Human posture recognition provides a dynamic field that has produced
+many methods. Using fuzzy subsets based data fusion methods to aggregate the
+results given by different types of recognition processes is a convenient way to
+improve recognition methods. Nevertheless, choosing a defuzziﬁcation method to
+implement the decision is a crucial point of this approach. The goal of this paper is
+to present an approach where the choice of the defuzzification method is driven by
+the constraints of the final data user, which are expressed as limitations on indica-
+tors like conﬁdence or accuracy. A practical experimentation illustrating this ap-
+proach is presented: from a depth camera sensor, human posture is interpreted and
+the defuzzification method is selected in accordance with the constraints of the
+ﬁnal information consumer. The paper illustrates the interest of the approach in a
+context of postures based human robot communication."
+1 Introduction
+"Human posture recognition provides a dynamic field that has produced many
+methods [Mitra and Acharya 2007] that commonly perform a measurement pro-
+cess in order to convert the physical state of an entity into an information entity.
+Although numerical values are commonly used to represent measurement results,
+it is now admitted that some applications manipulate symbolic values or linguistic
+terms better.
+
+In this paper, we concentrate first on recognizing human posture from upper
+limb posture detection. The two parts (arm and forearm) are expressed using lin-
+guistic terms. The corresponding symbolic values result from numeric angle
+measurements of the human body provided by a depth camera sensor, in our case
+an Asus Xtion Pro Live. We also use linguistic terms to express postures from
+symbolic values of the upper limb parts.
+
+Then we focus on the decision process performed from the symbolic values,
+which are commonly expressed in terms of mass. Fusion methods are particularly"

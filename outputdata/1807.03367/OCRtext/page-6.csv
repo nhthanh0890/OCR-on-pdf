@@ -1,0 +1,182 @@
+"Cont.
+6.25
+29.59
+
+39.83
+55.64
+
+41.50
+67.44
+
+43.48
+71.32
+
+Train
+Disc.
+
+6.25
+28.89
+
+35.40
+51.66
+
+40.15
+62.24
+
+44.49
+71.80
+
+Upper
+6.25
+30.23
+
+43.44
+62.78
+
+47.84
+78.90
+
+45.22
+87.92
+
+ 
+
+Cont.
+6.25
+30.00
+
+35.23
+53.12
+
+33.50
+64.55
+
+35.40
+67.48
+
+Valid
+
+Disc.
+6.25
+30.63
+
+36.56
+53.20
+
+37.77
+59.34
+
+39.64
+65.63
+
+Upper
+6.25
+32.50
+
+45.39
+65.78
+
+50.29
+79.77
+
+48.77
+87.45
+
+ 
+
+Cont.
+6.25
+32.29
+
+35.16
+56.09
+
+35.08
+66.80
+
+33.11
+69.85
+
+Test
+Disc.
+
+6.25
+33.12
+
+39.53
+55.78
+
+41.41
+62.15
+
+43.51
+69.51
+
+Upper
+6.25
+35 .00
+
+51.72
+72.97
+
+57.15
+86.64
+
+55.84
+92.41"
+=1
+
+
+"Table 2: Accuracy results for tourist localization with emergent language, showing continuous (Cont.)
+and discrete (Disc.) communication, along with the prediction upper bound. T denotes the length of
+
+the path and a I in the “MASC” column indicates that the model is conditioned on the communicated
+actions."
+"Prediction model We repeat the MASC operation T times (i.e. once for each action), and
+then aggregate the map embeddings by a sum over positionally-gated embeddings: uw’y =
+
+231:0 sigmoid(gt) (D uf’y. We score locations by taking the dot-product of the observation em-
+bedding e, which contains information about the sequence of observed landmarks by the tourist, and
+
+the map. We compute a distribution over the locations of the map p(1:, y|M, A) by taking a softmax
+over the computed scores:"
+"exp(s””’y)
+
+p(w,y|M,A) = 
+w:"
+"wy_ my
+3’ —e-u’,"
+(5)
+"Predicting T While emergent communication models use a ﬁxed length trasjectory T, natural
+language messages may differ in the number of communicated observations and actions. Hence, we
+predict T from the communicated message. Speciﬁcally, we use a softmax regression layer over
+the last hidden state h K of the RNN, and subsequently sample T from the resulting multinomial
+distribution:"
+"A
+
+T N Mult inomial"
+z = softmax(thhK + btm);
+(6)
+"We jointly train the T—prediction model via REINFORCE, with the guide’s loss as reward function
+and a mean-reward baseline."
+4.3
+Comparisons
+"To better analyze the performance of the models incorporating MASC, we compare against a no-
+MASC baseline in our experiments, as well as a prediction upper bound."
+"N0 MASC We compare the proposed MASC model with a model that does not include this
+mechanism. Whereas MASC predicts a convolution mask from the tourist message, the “No MASC”
+model uses W, the ordinary convolutional kernel to convolve the map embedding Ut to obtain Ut+1.
+We also share the weights of this convolution at each time step."
+"Prediction upper-bound Because we have access to the class-conditional likelihood p(Z, A|m, y),
+we are able to compute the Bayes error rate (or irreducible error). No model (no matter how
+
+expressive) with any amount of data can ever do better than this accuracy as there are multiple
+observations consistent with the labels."
+Results and Discussion
+
+We ﬁrst report the results for tourist localization with emergent language in Table 2.
+"Task is not too easy The upper-bound on localization performance suggest that communicating a
+single landmark observation is not sufﬁcient for accurate localization of the tourist (~35% accuracy).
+This is an important result because the need for two-way communication disappears if localization
+is too easy; if the guide knows the exact location of the tourist it sufﬁces to communicate a list of"
+
