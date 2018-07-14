@@ -2,8 +2,9 @@
 
 # How does it work?
 
-This's my program which process input pdf file then give all the characters and each character’s bounding box coordinates found in a single page of a pdf document
-In this approach, i will process each page of pdf file as an image. I will apply a simple segmentation method based on binary threshold method.
+This's my program which process input pdf file then give all the characters and each character’s bounding box coordinates which will be found in every pages of a pdf document.
+
+In my approach, i will process each page of pdf file as an image. Then i will apply a simple segmentation method based on binary threshold & morphological processing algorithm to extract ROI on the image.
 I will explain my approach by the following steps:
 - Step 1: Download research paper in pdf format from https://arxiv.org/ then store in "inputdata" directory
 - Step 2: Based on filename of each pdf file, create directory with name corresponding to pdf filename
